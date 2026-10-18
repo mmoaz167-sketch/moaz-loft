@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1769e0">
+<title>Moaz Loft Pro | إدارة الغية</title>
+<style>
+:root{--bg:#f3f7fc;--surface:#fff;--ink:#15243b;--muted:#687991;--line:#dce6f2;--primary:#1769e0;--primary2:#0b4eb5;--accent:#e7f0ff;--danger:#c62828;--warning:#946200;--shadow:0 10px 30px #17365d0d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",Arial,sans-serif;line-height:1.55}button,input,select,textarea{font:inherit}button{cursor:pointer}.app-header{background:linear-gradient(125deg,#0b2d5c,#1769e0);color:white;padding:22px clamp(14px,3vw,32px);display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:15px;background:#ffffff20;display:grid;place-items:center;font-size:27px}.brand h1{font-size:clamp(1.15rem,2.6vw,1.65rem);margin:0}.brand p{margin:3px 0 0;color:#dceaff;font-size:.87rem}.header-actions{display:flex;gap:8px;flex-wrap:wrap}.header-actions button{border:1px solid #ffffff55;color:white;background:#ffffff16;border-radius:10px;padding:9px 13px}.layout{display:grid;grid-template-columns:230px minmax(0,1fr);min-height:calc(100vh - 92px)}.sidebar{padding:18px 12px;background:var(--surface);border-left:1px solid var(--line)}.nav-title{font-size:.75rem;color:var(--muted);padding:8px 12px}.nav-btn{width:100%;display:flex;align-items:center;gap:10px;text-align:right;border:0;background:transparent;color:#43564f;padding:12px;border-radius:11px;margin:2px 0;font-weight:600}.nav-btn:hover{background:#edf4ff}.nav-btn.active{background:var(--accent);color:var(--primary2)}.nav-icon{width:24px;text-align:center;font-size:1.05rem}.main{padding:clamp(14px,2.6vw,30px);min-width:0;max-width:1500px;width:100%;margin:auto}.page{display:none}.page.active{display:block}.page-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}.page-heading h2{margin:0;font-size:1.5rem}.page-heading p{margin:5px 0 0;color:var(--muted);font-size:.92rem}.grid{display:grid;gap:16px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:18px}.two-col{grid-template-columns:repeat(2,minmax(0,1fr))}.three-col{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:19px;box-shadow:var(--shadow);transition:box-shadow .18s ease,border-color .18s ease;min-width:0}.stat-label{color:var(--muted);font-size:.86rem}.stat-value{font-size:1.8rem;font-weight:800;margin:6px 0 1px;letter-spacing:-.5px}.stat-note{font-size:.8rem;color:var(--muted)}.stat-icon{float:left;width:42px;height:42px;border-radius:13px;background:#e7f0ff;display:grid;place-items:center;font-size:1.3rem}.card h3{margin:0 0 14px;font-size:1.05rem;color:#1a3458}.card:hover{border-color:#c9daf1;box-shadow:0 13px 32px #17365d12}.muted{color:var(--muted)}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{min-width:0}.field.full{grid-column:1/-1}label{display:block;font-size:.86rem;font-weight:700;margin-bottom:6px;color:#40534d}input,select,textarea{width:100%;border:1px solid #d5e0da;border-radius:10px;background:#fff;padding:10px 12px;color:var(--ink);outline:none;min-width:0}textarea{min-height:78px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px #1769e01a}.btn{border:1px solid transparent;border-radius:12px;padding:10px 15px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:7px;transition:transform .16s ease,box-shadow .16s ease,background .16s ease;box-shadow:0 2px 5px #0b2d5c08}.btn:hover{transform:translateY(-1px);box-shadow:0 7px 18px #0b2d5c15}.btn:active{transform:translateY(0)}.btn-primary{background:linear-gradient(135deg,#2478f2,#1459c7);color:white}.btn-primary:hover{background:linear-gradient(135deg,#1769e0,#0b4eb5)}.btn-light{background:#f0f5f2;border-color:var(--line);color:var(--ink)}.btn-danger{background:#fff0ef;color:var(--danger);border-color:#ffd7d3}.btn-small{padding:6px 9px;font-size:.8rem}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;min-width:650px;background:white}th,td{padding:11px 12px;text-align:right;border-bottom:1px solid var(--line);font-size:.88rem;vertical-align:middle}th{background:#f0f5fc;color:#294365;white-space:nowrap}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#fbfdfc}.badge{display:inline-block;border-radius:999px;padding:3px 9px;font-size:.76rem;font-weight:700;background:#e7f0ff;color:#1555ad}.badge.warn{background:#fff4d8;color:#8b5e00}.badge.danger{background:#ffe9e7;color:#a5231b}.badge.neutral{background:#edf1ef;color:#596a63}.toolbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:13px}.toolbar input{max-width:300px}.empty{text-align:center;color:var(--muted);padding:24px!important}.notice{padding:12px 14px;border-radius:11px;background:#fff6dd;color:#795600;border:1px solid #f2dfaa;margin-bottom:15px;font-size:.88rem}.success{background:#e8f7ef;color:#176b55;border-color:#ccebd9}.progress{height:8px;background:#e7efeb;border-radius:99px;overflow:hidden;margin-top:8px}.progress span{display:block;height:100%;background:var(--primary);border-radius:99px}.list-item{padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}.list-item:last-child{border-bottom:0}.chat{height:260px;overflow:auto;background:#f7faf8;border:1px solid var(--line);border-radius:12px;padding:12px;margin:12px 0}.message{max-width:90%;padding:10px 12px;border-radius:12px;margin:8px 0;white-space:pre-wrap;overflow-wrap:anywhere}.message.ai{background:#e7f0ff;margin-left:auto;border-right:3px solid var(--primary)}.message.user{background:#e8edf8;margin-right:auto}.hint{font-size:.8rem;color:var(--muted);margin-top:5px}.footer-note{font-size:.8rem;color:var(--muted);margin-top:18px}.divider{height:1px;background:var(--line);margin:17px 0}.hidden{display:none!important}.toast{position:fixed;bottom:20px;left:20px;background:#0b2d5c;color:white;padding:12px 17px;border-radius:12px;box-shadow:var(--shadow);z-index:10;max-width:min(90vw,420px);opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}.mobile-menu{display:none}.small-kpi{font-size:.85rem;color:var(--muted)}.risk-box{border:1px solid #f2dfaa;background:#fffaf0;border-radius:12px;padding:12px}.pill-row{display:flex;gap:7px;flex-wrap:wrap}
+.nav-btn{transition:background .16s ease,color .16s ease,transform .16s ease}.nav-btn.active{box-shadow:inset -3px 0 0 var(--primary)}.app-header{box-shadow:0 8px 26px #0b2d5c20}.logo{border:1px solid #ffffff30;box-shadow:inset 0 1px 0 #ffffff20}.stat-icon{background:linear-gradient(145deg,#eaf2ff,#dce9ff)}.progress span{background:linear-gradient(90deg,#4b94ff,#1769e0)}.badge{background:#e7f0ff;color:#1555ad}.notice{border-radius:13px}.risk-box{border-radius:14px}@media(max-width:1000px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:190px minmax(0,1fr)}}
+@media(max-width:720px){.layout{display:block}.sidebar{display:flex;overflow:auto;gap:5px;padding:8px;border-left:0;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.nav-title{display:none}.nav-btn{width:auto;flex:0 0 auto;margin:0;padding:9px 11px;font-size:.82rem}.nav-icon{width:auto}.main{padding:14px}.two-col,.three-col{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.card{padding:15px}.app-header{padding:16px}.header-actions button{padding:8px 10px}.page-heading h2{font-size:1.3rem}}
+@media(max-width:420px){.stats{grid-template-columns:1fr 1fr;gap:9px}.stat-value{font-size:1.45rem}.stat-icon{width:34px;height:34px}.stat-label{font-size:.77rem}.stat-note{font-size:.72rem}}
+</style>
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><div class="logo">🕊️</div><div><h1>Moaz Loft <span style="color:#bcd7ff">Pro</span></h1><p>نظام ذكي لإدارة الغية والإنتاج والرعاية</p></div></div>
+  <div class="header-actions"><button onclick="exportBackup()">⬇️ نسخة احتياطية</button><button onclick="document.getElementById('importFile').click()">⬆️ استيراد بيانات</button><input id="importFile" type="file" accept=".json,application/json" class="hidden" onchange="importBackup(event)"></div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+  <div class="nav-title">القائمة الرئيسية</div>
+  <button class="nav-btn active" data-page="dashboard" onclick="showPage('dashboard',this)"><span class="nav-icon">▦</span> لوحة التحكم</button>
+  <button class="nav-btn" data-page="birds" onclick="showPage('birds',this)"><span class="nav-icon">🕊️</span> سجل الطيور</button>
+  <button class="nav-btn" data-page="breeding" onclick="showPage('breeding',this)"><span class="nav-icon">🥚</span> الأزواج والإنتاج</button>
+  <button class="nav-btn" data-page="health" onclick="showPage('health',this)"><span class="nav-icon">🩺</span> الصحة والكورسات</button>
+  <button class="nav-btn" data-page="feed" onclick="showPage('feed',this)"><span class="nav-icon">🌾</span> التغذية والكلفة</button>
+  <button class="nav-btn" data-page="expenses" onclick="showPage('expenses',this)"><span class="nav-icon">💰</span> المصروفات</button>
+  <button class="nav-btn" data-page="pedigree" onclick="showPage('pedigree',this)"><span class="nav-icon">🌳</span> شجرة النسب</button>
+  <button class="nav-btn" data-page="assistant" onclick="showPage('assistant',this)"><span class="nav-icon">✨</span> المساعد</button>
+  <button class="nav-btn" data-page="reports" onclick="showPage('reports',this)"><span class="nav-icon">📊</span> التقارير</button>
+  <button class="nav-btn" data-page="settings" onclick="showPage('settings',this)"><span class="nav-icon">⚙️</span> الإعدادات والبيانات</button>
+</aside>
+<main class="main">
+<section id="page-dashboard" class="page active">
+  <div class="page-heading"><div><h2>لوحة التحكم</h2><p id="todayLabel">ملخص سريع لحالة الغية</p></div><button class="btn btn-primary" onclick="showPage('birds')">＋ تسجيل طائر</button></div>
+  <div class="grid stats">
+    <div class="card"><span class="stat-icon">🕊️</span><div class="stat-label">إجمالي الطيور</div><div class="stat-value" id="statBirds">0</div><div class="stat-note">كل الطيور المسجلة</div></div>
+    <div class="card"><span class="stat-icon">💞</span><div class="stat-label">الأزواج المسجلة</div><div class="stat-value" id="statPairs">0</div><div class="stat-note">سجلات دورات الإنتاج</div></div>
+    <div class="card"><span class="stat-icon">🐣</span><div class="stat-label">زغاليل مفطومة</div><div class="stat-value" id="statChicks">0</div><div class="stat-note">إجمالي ما تم تسجيله</div></div>
+    <div class="card"><span class="stat-icon">💸</span><div class="stat-label">إجمالي المصروفات</div><div class="stat-value" id="statExpenses">0</div><div class="stat-note">بالجنيه المصري</div></div>
+  </div>
+  <div class="grid two-col">
+    <div class="card"><h3>📌 متابعة سريعة</h3><div id="dashboardAlerts"><div class="empty">لا توجد تنبيهات حتى الآن.</div></div></div>
+    <div class="card"><h3>📈 ملخص الإنتاج</h3><div class="list-item"><span>البيض المخصب المسجل</span><strong id="statFertile">0</strong></div><div class="list-item"><span>الزغاليل المفطومة</span><strong id="statWeaned">0</strong></div><div class="list-item"><span>نسبة الفطام من البيض المخصب</span><strong id="statRate">0%</strong></div><div class="progress"><span id="rateBar" style="width:0%"></span></div><p class="hint">النسبة حسابية بناءً على السجلات التي أدخلتها، وليست تقييمًا بيطريًا.</p></div>
+  </div>
+  <div class="card" style="margin-top:16px"><h3>🗓️ آخر السجلات</h3><div id="recentActivity"><div class="empty">ابدأ بإضافة طيور أو سجلات لتظهر هنا.</div></div></div>
+</section>
+
+<section id="page-birds" class="page">
+  <div class="page-heading"><div><h2>سجل الطيور</h2><p>إدارة بيانات كل طائر ورقمه وسلالته ونسبه وحالته.</p></div></div>
+  <div class="card">
+    <h3 id="birdFormTitle">إضافة طائر جديد</h3>
+    <form id="birdForm" onsubmit="saveBird(event)"><input type="hidden" id="birdId">
+      <div class="form-grid">
+        <div class="field"><label for="birdRing">رقم الدبلة / الكود *</label><input id="birdRing" required maxlength="60" placeholder="مثال: MOAZ-001"></div>
+        <div class="field"><label for="birdBreed">السلالة / النوع</label><input id="birdBreed" list="breedOptions" placeholder="مثال: زاجل، لاحم، قص كرزلي"><datalist id="breedOptions"><option>زاجل</option><option>لاحم</option><option>بلدي</option><option>شقلباظ</option><option>قص كرزلي</option><option>فليمستر</option></datalist></div>
+        <div class="field"><label for="birdSex">الجنس</label><select id="birdSex"><option value="غير محدد">غير محدد</option><option value="ذكر">ذكر</option><option value="نتاية">نتاية</option><option value="زغلول">زغلول / غير محدد الجنس</option></select></div>
+        <div class="field"><label for="birdStatus">الحالة</label><select id="birdStatus"><option>سليم</option><option>تحت الملاحظة</option><option>علاج</option><option>تزاوج / إنتاج</option><option>مباع</option><option>نافق</option></select></div>
+        <div class="field"><label for="birdBirth">تاريخ الفقس (اختياري)</label><input type="date" id="birdBirth"></div>
+        <div class="field"><label for="birdColor">اللون / العلامات</label><input id="birdColor" placeholder="مثال: أزرق، أبيض، مبرقش"></div>
+        <div class="field"><label for="fatherRing">كود الأب</label><input id="fatherRing" list="birdCodes" placeholder="اختياري"></div>
+        <div class="field"><label for="motherRing">كود الأم</label><input id="motherRing" list="birdCodes" placeholder="اختياري"></div>
+        <div class="field full"><label for="birdNotes">ملاحظات</label><textarea id="birdNotes" placeholder="ملاحظات عن الطائر أو مصدر الشراء..."></textarea></div>
+      </div><div class="actions"><button class="btn btn-primary" type="submit">💾 حفظ الطائر</button><button class="btn btn-light" type="button" onclick="resetBirdForm()">تفريغ الحقول</button></div>
+    </form>
+  </div>
+  <div class="card" style="margin-top:16px"><div class="toolbar"><h3 style="margin:0">كل الطيور</h3><input id="birdSearch" placeholder="بحث بالكود أو النوع أو اللون..." oninput="renderBirds()"><select id="birdFilter" onchange="renderBirds()" style="max-width:180px"><option value="">كل الحالات</option><option>سليم</option><option>تحت الملاحظة</option><option>علاج</option><option>تزاوج / إنتاج</option><option>مباع</option><option>نافق</option></select></div><div class="table-wrap"><table><thead><tr><th>الدبلة</th><th>النوع / الجنس</th><th>الحالة</th><th>الفقس</th><th>الأب / الأم</th><th>إجراءات</th></tr></thead><tbody id="birdsTableBody"></tbody></table></div></div>
+  <datalist id="birdCodes"></datalist>
+</section>
+
+<section id="page-breeding" class="page">
+  <div class="page-heading"><div><h2>الأزواج والإنتاج</h2><p>سجل كل دورة بشكل منفصل لمتابعة الخصوبة والفطام.</p></div></div>
+  <div class="card"><h3 id="pairFormTitle">تسجيل دورة إنتاج</h3><form id="pairForm" onsubmit="savePair(event)"><input type="hidden" id="pairId"><div class="form-grid">
+    <div class="field"><label for="nestNo">رقم العين / العش *</label><input id="nestNo" required placeholder="مثال: عين 5"></div>
+    <div class="field"><label for="pairDate">تاريخ بداية الدورة / الرقاد</label><input id="pairDate" type="date"></div>
+    <div class="field"><label for="expectedHatch">تاريخ الفقس المتوقع</label><input id="expectedHatch" type="date"><div class="hint">اختياري؛ إن تركته فارغًا سيقدّر البرنامج الفقس بعد 18 يومًا من تاريخ الدورة.</div></div>
+    <div class="field"><label for="maleSelect">الذكر</label><select id="maleSelect"><option value="">اختر الذكر</option></select></div>
+    <div class="field"><label for="femaleSelect">النتاية</label><select id="femaleSelect"><option value="">اختر النتاية</option></select></div>
+    <div class="field"><label for="eggsLaid">عدد البيض الموضوع</label><input id="eggsLaid" type="number" min="0" max="20" value="2"></div>
+    <div class="field"><label for="fertileEggs">عدد البيض المخصب</label><input id="fertileEggs" type="number" min="0" max="20" value="2"></div>
+    <div class="field"><label for="hatchedEggs">عدد البيض الفاقس</label><input id="hatchedEggs" type="number" min="0" max="20" value="0"></div>
+    <div class="field"><label for="weanedChicks">عدد الزغاليل المفطومة</label><input id="weanedChicks" type="number" min="0" max="20" value="0"></div>
+    <div class="field"><label for="cycleStatus">حالة الدورة</label><select id="cycleStatus"><option>جارية</option><option>مكتملة</option><option>فشلت</option><option>متوقفة</option></select></div>
+    <div class="field"><label for="pairNotes">ملاحظات</label><input id="pairNotes" placeholder="ملاحظات اختيارية"></div>
+  </div><div id="inbreedingAlert" class="notice hidden" style="margin-top:12px">⚠️ يوجد احتمال قرابة حسب بيانات الأب والأم المسجلة. راجع النسب قبل اعتماد التزاوج.</div><div class="actions"><button class="btn btn-primary" type="submit">💾 حفظ الدورة</button><button class="btn btn-light" type="button" onclick="resetPairForm()">تفريغ الحقول</button></div></form></div>
+  <div class="card" style="margin-top:16px"><div class="toolbar"><h3 style="margin:0">سجل دورات الإنتاج</h3><input id="pairSearch" placeholder="بحث بالعين أو كود الطائر..." oninput="renderPairs()"></div><div class="table-wrap"><table><thead><tr><th>التاريخ</th><th>العين</th><th>الزوج</th><th>بيض / مخصب / فاقس</th><th>فطام</th><th>الفقس المتوقع / المتبقي</th><th>نسبة الفطام*</th><th>الحالة</th><th>إجراءات</th></tr></thead><tbody id="pairsTableBody"></tbody></table></div><p class="hint">* نسبة الفطام = الزغاليل المفطومة ÷ البيض المخصب المسجل × 100. تأكد من إدخال الأعداد بشكل صحيح.</p></div>
+</section>
+
+<section id="page-health" class="page">
+  <div class="page-heading"><div><h2>الصحة والعلاج</h2><p>توثيق الأعراض والملاحظات والمواعيد. لا يغني السجل عن الطبيب البيطري.</p></div></div>
+  <div class="notice">تنبيه صحي: لا تستخدم مضادًا حيويًا أو جرعة دواء جماعية اعتمادًا على الأعراض وحدها. سجّل العلامات واطلب إرشاد طبيب بيطري، خصوصًا عند انتشار الإسهال أو الخمول أو صعوبة التنفس. لا توجد وصفة منزلية طبيعية مضمونة لعلاج العدوى.</div>
+  <div class="card"><h3 id="healthFormTitle">إضافة ملاحظة صحية</h3><form id="healthForm" onsubmit="saveHealth(event)"><input type="hidden" id="healthId"><div class="form-grid">
+    <div class="field"><label for="healthDate">التاريخ *</label><input id="healthDate" type="date" required></div>
+    <div class="field"><label for="healthBird">الطائر (اختياري)</label><select id="healthBird"><option value="">الغية / طائر غير محدد</option></select></div>
+    <div class="field"><label for="healthType">نوع السجل</label><select id="healthType"><option>ملاحظة / أعراض</option><option>زيارة طبيب بيطري</option><option>علاج موصوف</option><option>تحصين</option><option>تحسن / متابعة</option></select></div>
+    <div class="field"><label for="healthFollow">موعد المتابعة</label><input id="healthFollow" type="date"></div>
+    <div class="field full"><label for="healthSymptoms">الأعراض أو الإجراء *</label><textarea id="healthSymptoms" required placeholder="متى بدأت؟ عدد الطيور المتأثرة؟ الأكل والشرب والنشاط؟"></textarea></div>
+    <div class="field full"><label for="healthNotes">ملاحظات إضافية / اسم الطبيب</label><textarea id="healthNotes"></textarea></div>
+  </div><div class="actions"><button class="btn btn-primary" type="submit">حفظ السجل الصحي</button><button class="btn btn-light" type="button" onclick="resetHealthForm()">تفريغ الحقول</button></div></form></div>
+  <div class="card" style="margin-top:16px"><h3>السجل الصحي والمتابعات</h3><div class="table-wrap"><table><thead><tr><th>التاريخ</th><th>الطائر</th><th>نوع السجل</th><th>التفاصيل</th><th>المتابعة</th><th>إجراءات</th></tr></thead><tbody id="healthTableBody"></tbody></table></div></div>
+  <div class="grid two-col" style="margin-top:16px">
+    <div class="card"><h3>🧪 تسجيل كورس وقاية / علاج</h3><p class="muted">سجّل الكورس كما وصفه الطبيب أو كما قررت متابعته، مع المكونات والكلفة ومواعيد المراجعة.</p>
+      <form id="courseForm" onsubmit="saveCourse(event)"><input type="hidden" id="courseId"><div class="form-grid">
+        <div class="field"><label for="courseName">اسم الكورس *</label><input id="courseName" required placeholder="مثال: متابعة علاج موصوف"></div>
+        <div class="field"><label for="coursePurpose">الغرض</label><select id="coursePurpose"><option>وقاية</option><option>علاج موصوف بيطريًا</option><option>دعم ورعاية</option><option>متابعة بعد المرض</option></select></div>
+        <div class="field"><label for="courseTarget">الطائر / المجموعة</label><input id="courseTarget" placeholder="رقم دبلة أو كل الغية"></div>
+        <div class="field"><label for="courseStatus">الحالة</label><select id="courseStatus"><option>مخطط</option><option>جاري</option><option>مكتمل</option><option>متوقف</option></select></div>
+        <div class="field"><label for="courseStart">تاريخ البداية *</label><input id="courseStart" type="date" required></div>
+        <div class="field"><label for="courseEnd">تاريخ النهاية المتوقع</label><input id="courseEnd" type="date"></div>
+        <div class="field"><label for="courseFollow">موعد المتابعة القادمة</label><input id="courseFollow" type="date"></div>
+        <div class="field"><label for="courseCost">الكلفة الإجمالية (ج.م)</label><input id="courseCost" type="number" min="0" step=".01" value="0"></div>
+        <div class="field full"><label for="courseIngredients">المكونات / الأدوية / الكميات</label><textarea id="courseIngredients" placeholder="اكتب الاسم والكمية التي استخدمتها؛ لا تستخدم جرعات غير موصوفة بيطريًا."></textarea></div>
+        <div class="field full"><label for="courseNotes">الملاحظات ونتيجة المتابعة</label><textarea id="courseNotes" placeholder="الأعراض قبل وبعد، الشهية والنشاط، وأي تعليمات من الطبيب"></textarea></div>
+      </div><div class="actions"><button class="btn btn-primary" type="submit">💾 حفظ الكورس</button><button class="btn btn-light" type="button" onclick="resetCourseForm()">تفريغ الحقول</button></div></form>
+    </div>
+    <div class="card"><h3>🌿 الرعاية المنزلية الآمنة</h3><div class="notice">المكونات الطبيعية ليست بديلًا للتشخيص، وقد تضر الطيور بتركيزات غير مناسبة. لا تضع الثوم أو الخل أو الليمون أو الزيوت العطرية أو خلطات منزلية في ماء الشرب كعلاج دون موافقة طبيب طيور.</div>
+      <div class="list-item"><span>ماء الشرب</span><strong>ماء نظيف وطازج يوميًا</strong></div>
+      <div class="list-item"><span>المشارب والمعالف</span><strong>غسل وتجفيف منتظم</strong></div>
+      <div class="list-item"><span>البيئة</span><strong>تهوية جيدة وجفاف ونظافة</strong></div>
+      <div class="list-item"><span>طائر تظهر عليه أعراض</span><strong>تقليل الاحتكاك ومراقبته</strong></div>
+      <div class="list-item"><span>إسهال أو خمول أو صعوبة تنفس</span><strong>استشارة بيطرية سريعًا</strong></div>
+      <p class="hint">يمكنك تسجيل أي وصفة أو مكوّن جرّبته في ملاحظات الكورس لتوثيق النتيجة، لكن لا تعتبرها علاجًا مثبتًا ولا تؤخر الرعاية البيطرية.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px"><div class="toolbar"><h3 style="margin:0">📋 متابعة كورسات الوقاية والعلاج</h3><strong id="courseCostTotal" class="badge">إجمالي الكلفة: 0 ج.م</strong></div><div class="table-wrap"><table><thead><tr><th>الكورس</th><th>النوع / المستهدف</th><th>الفترة</th><th>المتابعة القادمة</th><th>الكلفة</th><th>الحالة</th><th>إجراءات</th></tr></thead><tbody id="coursesTableBody"></tbody></table></div></div>
+</section>
+
+<section id="page-feed" class="page">
+  <div class="page-heading"><div><h2>التغذية والكلفة</h2><p>احسب كميات الخلطة وسجل مشتريات العلف لمتابعة التكلفة.</p></div></div>
+  <div class="grid two-col">
+    <div class="card"><h3>⚖️ حاسبة خلطة العلف</h3><div class="field"><label for="feedWeight">الوزن الإجمالي (كجم)</label><input id="feedWeight" type="number" min=".1" step=".1" value="4"></div><p class="hint">النسب التالية نقطة بداية قابلة للتعديل وليست وصفة غذائية ثابتة لكل الأعمار والمواسم.</p><div id="mixInputs"><div class="form-grid">
+      <div class="field"><label>ذرة صفراء (%)</label><input id="mixYellowCorn" class="mix-pct" type="number" min="0" max="100" step=".1" value="30"></div>
+      <div class="field"><label>ذرة حمراء (%)</label><input id="mixRedCorn" class="mix-pct" type="number" min="0" max="100" step=".1" value="0"></div>
+      <div class="field"><label>بسلة بيضاء (%)</label><input id="mixWhitePeas" class="mix-pct" type="number" min="0" max="100" step=".1" value="20"></div>
+      <div class="field"><label>بسلة خضراء (%)</label><input id="mixGreenPeas" class="mix-pct" type="number" min="0" max="100" step=".1" value="0"></div>
+      <div class="field"><label>ذرة عويجة / سورجم (%)</label><input id="mixSorghum" class="mix-pct" type="number" min="0" max="100" step=".1" value="0"></div>
+      <div class="field"><label>بذر عباد الشمس (%)</label><input id="mixSunflower" class="mix-pct" type="number" min="0" max="100" step=".1" value="3"></div>
+      <div class="field"><label>قرطم (%)</label><input id="mixSafflower" class="mix-pct" type="number" min="0" max="100" step=".1" value="5"></div>
+      <div class="field"><label>حبة البركة (%)</label><input id="mixNigella" class="mix-pct" type="number" min="0" max="100" step=".1" value="0"></div>
+      <div class="field"><label>فول (%)</label><input id="mixFava" class="mix-pct" type="number" min="0" max="100" step=".1" value="15"></div>
+      <div class="field"><label>فاصوليا (%)</label><input id="mixBeans" class="mix-pct" type="number" min="0" max="100" step=".1" value="0"></div>
+      <div class="field"><label>لوبيا (%)</label><input id="mixCowpea" class="mix-pct" type="number" min="0" max="100" step=".1" value="5"></div>
+      <div class="field"><label>قمح (%)</label><input id="mixWheat" class="mix-pct" type="number" min="0" max="100" step=".1" value="10"></div>
+      <div class="field"><label>عدس أصفر (%)</label><input id="mixYellowLentil" class="mix-pct" type="number" min="0" max="100" step=".1" value="10"></div>
+      <div class="field"><label>بذر كتان (%)</label><input id="mixFlax" class="mix-pct" type="number" min="0" max="100" step=".1" value="2"></div>
+    </div><div class="actions"><button class="btn btn-light btn-small" type="button" onclick="resetFeedTemplate()">استعادة خلطة البداية</button><span class="badge" id="mixPercentSum">مجموع النسب: 100%</span></div></div><div id="feedResult" class="risk-box" style="margin-top:14px">اضغط على حساب الخلطة لعرض المقادير.</div><div class="actions"><button class="btn btn-primary" onclick="calculateFeed()">حساب الخلطة</button></div></div>
+    <div class="card"><h3>🧾 تسجيل شراء علف</h3><form id="feedPurchaseForm" onsubmit="saveFeedPurchase(event)"><div class="form-grid"><div class="field"><label for="feedPurchaseDate">التاريخ</label><input id="feedPurchaseDate" type="date" required></div><div class="field"><label for="feedType">نوع العلف</label><input id="feedType" required placeholder="ذرة / خلطة / بسلة"></div><div class="field"><label for="feedQty">الكمية (كجم)</label><input id="feedQty" type="number" min=".01" step=".01" required></div><div class="field"><label for="feedPrice">إجمالي السعر (جنيه)</label><input id="feedPrice" type="number" min="0" step=".01" required></div></div><div class="actions"><button class="btn btn-primary" type="submit">تسجيل الشراء</button></div></form><div class="divider"></div><div class="list-item"><span>إجمالي الكميات المسجلة</span><strong id="feedTotalQty">0 كجم</strong></div><div class="list-item"><span>إجمالي مشتريات العلف</span><strong id="feedTotalCost">0 ج.م</strong></div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><h3>سجل مشتريات العلف</h3><div class="table-wrap"><table><thead><tr><th>التاريخ</th><th>النوع</th><th>الكمية</th><th>السعر</th><th>سعر الكيلو</th><th>إجراءات</th></tr></thead><tbody id="feedTableBody"></tbody></table></div></div>
+</section>
+
+<section id="page-expenses" class="page">
+  <div class="page-heading"><div><h2>المصروفات والإيرادات</h2><p>تتبع مصاريف الغية والمبيعات لحساب صافي الحركة المالية.</p></div></div>
+  <div class="grid stats"><div class="card"><div class="stat-label">إجمالي المصروفات</div><div class="stat-value" id="expenseTotal">0</div><div class="stat-note">جنيه مصري</div></div><div class="card"><div class="stat-label">إجمالي الإيرادات</div><div class="stat-value" id="incomeTotal">0</div><div class="stat-note">جنيه مصري</div></div><div class="card"><div class="stat-label">صافي الحركة</div><div class="stat-value" id="netTotal">0</div><div class="stat-note">الإيرادات ناقص المصروفات</div></div><div class="card"><div class="stat-label">عدد العمليات</div><div class="stat-value" id="transactionCount">0</div><div class="stat-note">كل السجلات المالية</div></div></div>
+  <div class="card"><h3>إضافة عملية مالية</h3><form id="expenseForm" onsubmit="saveExpense(event)"><div class="form-grid"><div class="field"><label for="expenseDate">التاريخ *</label><input id="expenseDate" type="date" required></div><div class="field"><label for="expenseType">نوع العملية</label><select id="expenseType"><option value="expense">مصروف</option><option value="income">إيراد</option></select></div><div class="field"><label for="expenseCategory">التصنيف</label><select id="expenseCategory"><option>علف</option><option>أدوية ورعاية</option><option>طيور جديدة</option><option>تجهيزات الغية</option><option>نقل</option><option>بيع طيور</option><option>بيض / زغاليل</option><option>أخرى</option></select></div><div class="field"><label for="expenseAmount">المبلغ (جنيه) *</label><input id="expenseAmount" type="number" min=".01" step=".01" required></div><div class="field full"><label for="expenseDescription">الوصف</label><input id="expenseDescription" placeholder="تفاصيل العملية أو الطرف الآخر"></div></div><div class="actions"><button class="btn btn-primary" type="submit">تسجيل العملية</button></div></form></div>
+  <div class="card" style="margin-top:16px"><div class="toolbar"><h3 style="margin:0">دفتر الحركة المالية</h3><select id="expenseFilter" onchange="renderExpenses()" style="max-width:180px"><option value="">كل العمليات</option><option value="expense">المصروفات فقط</option><option value="income">الإيرادات فقط</option></select></div><div class="table-wrap"><table><thead><tr><th>التاريخ</th><th>النوع</th><th>التصنيف</th><th>الوصف</th><th>المبلغ</th><th>إجراءات</th></tr></thead><tbody id="expensesTableBody"></tbody></table></div></div>
+</section>
+
+<section id="page-pedigree" class="page">
+  <div class="page-heading"><div><h2>شجرة النسب</h2><p>استعرض بيانات الطائر وأبويه ودورات الإنتاج المرتبطة به.</p></div></div>
+  <div class="card"><div class="field"><label for="pedigreeSelect">اختر الطائر</label><select id="pedigreeSelect" onchange="showPedigree()"><option value="">اختر طائرًا</option></select></div><div id="pedigreeResult" style="margin-top:16px"><div class="empty">اختر طائرًا لعرض بيانات النسب.</div></div></div>
+  <div class="card" style="margin-top:16px"><h3>تنبيه القرابة</h3><p class="muted">يتم الفحص بناءً على الأب والأم المسجلين فقط. إذا كانت بيانات النسب ناقصة فقد لا تظهر القرابة الحقيقية، لذلك لا تعتبر النتيجة ضمانًا لعدم وجود قرابة.</p><div id="relatedPairs"></div></div>
+</section>
+
+<section id="page-assistant" class="page">
+  <div class="page-heading"><div><h2>مساعد الغية</h2><p>مساعد إرشادي محلي بسيط، وليس اتصالًا بنموذج ذكاء اصطناعي حقيقي.</p></div></div>
+  <div class="notice">هذه النسخة لا ترسل البيانات إلى خدمة ذكاء اصطناعي خارجية. الإجابات إرشادات عامة فقط؛ لا تعتمد عليها لتشخيص مرض أو تحديد دواء أو جرعة.</div>
+  <div class="card"><div id="chatBox" class="chat"><div class="message ai">أهلًا بك! اسأل عن إدارة السجلات أو التغذية أو أساسيات الرعاية. لو السؤال عن مرض، اذكر الأعراض وعدد الطيور ومدة ظهورها، وسأساعدك في ترتيب الملاحظات التي تعرضها على طبيب بيطري.</div></div><form id="aiForm" onsubmit="askAssistant(event)"><div class="field"><label for="aiQuery">اكتب سؤالك</label><textarea id="aiQuery" placeholder="مثال: عندي براز أخضر عند بعض الحمام، أعمل إيه؟" required></textarea></div><div class="actions"><button class="btn btn-primary" type="submit">إرسال السؤال</button><button class="btn btn-light" type="button" onclick="clearChat()">مسح المحادثة</button></div></form></div>
+</section>
+
+<section id="page-reports" class="page">
+  <div class="page-heading"><div><h2>التقارير والإحصائيات</h2><p>ملخص قابل للطباعة مع إمكانية تنزيل بيانات CSV.</p></div><button class="btn btn-primary" onclick="window.print()">🖨️ طباعة التقرير</button></div>
+  <div class="grid two-col"><div class="card"><h3>توزيع الطيور حسب الجنس</h3><div id="sexReport"></div></div><div class="card"><h3>توزيع الحالات</h3><div id="statusReport"></div></div><div class="card"><h3>كفاءة الإنتاج حسب السجلات</h3><div id="productionReport"></div></div><div class="card"><h3>ملخص مالي</h3><div id="financialReport"></div></div></div>
+  <div class="card" style="margin-top:16px"><h3>تصدير جداول</h3><p class="muted">يمكن تنزيل جدول الطيور والإنتاج والصحة والكورسات والحركة المالية بصيغة CSV لفتحه في Excel.</p><div class="actions"><button class="btn btn-light" onclick="exportCSV('birds')">تصدير الطيور CSV</button><button class="btn btn-light" onclick="exportCSV('pairs')">تصدير الإنتاج CSV</button><button class="btn btn-light" onclick="exportCSV('health')">تصدير الصحة CSV</button><button class="btn btn-light" onclick="exportCSV('courses')">تصدير الكورسات CSV</button><button class="btn btn-light" onclick="exportCSV('expenses')">تصدير المالية CSV</button></div></div>
+</section>
+
+<section id="page-settings" class="page">
+  <div class="page-heading"><div><h2>الإعدادات والبيانات</h2><p>إدارة النسخ الاحتياطية والبيانات المحفوظة على هذا المتصفح.</p></div></div>
+  <div class="notice">البيانات حاليًا محفوظة محليًا في المتصفح على هذا الجهاز. مسح بيانات المتصفح أو تغييره قد يؤدي لفقدانها؛ صدّر نسخة احتياطية بانتظام. لا توجد مزامنة سحابية في هذه النسخة.</div>
+  <div class="grid two-col"><div class="card"><h3>💾 النسخ الاحتياطي والاستعادة</h3><p class="muted">النسخة تشمل الطيور والإنتاج والصحة والعلف والمصروفات.</p><div class="actions"><button class="btn btn-primary" onclick="exportBackup()">تنزيل نسخة JSON</button><button class="btn btn-light" onclick="document.getElementById('importFile').click()">استيراد نسخة JSON</button></div></div><div class="card"><h3>🧹 إدارة البيانات</h3><p class="muted">حذف البيانات نهائي من هذا المتصفح. صدّر نسخة أولًا إذا كنت تحتاج الاحتفاظ بها.</p><button class="btn btn-danger" onclick="clearAllData()">حذف كل البيانات</button></div><div class="card"><h3>ℹ️ معلومات النسخة</h3><div class="list-item"><span>اسم التطبيق</span><strong>Moaz Loft Pro</strong></div><div class="list-item"><span>نسخة التطبيق</span><strong>3.0 Blue Edition</strong></div><div class="list-item"><span>مكان التخزين</span><strong>هذا المتصفح</strong></div><div class="list-item"><span>مزامنة سحابية</span><strong>غير مفعّلة</strong></div></div><div class="card"><h3>🛡️ الخصوصية</h3><p class="muted">لا يحتوي التطبيق على تسجيل دخول أو صلاحيات مستخدمين في الوقت الحالي. لا تستخدم جهازًا عامًا لتخزين بيانات خاصة. المساعد إرشادي محلي وليس خدمة AI متصلة.</p></div></div>
+</section>
+<div class="footer-note">Moaz Loft Pro • Blue Edition • نسخة محلية • احتفظ بنسخة احتياطية منتظمة.</div>
+</main>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+const STORE_KEY='moaz_loft_pro_v2';
+const oldBirdsKey='moaz_loft_birds', oldPairsKey='moaz_loft_pairs';
+const emptyData=()=>({birds:[],pairs:[],health:[],healthCourses:[],feedPurchases:[],expenses:[]});
+function safeRead(key,fallback){try{const v=JSON.parse(localStorage.getItem(key));return v??fallback}catch{return fallback}}
+function loadData(){
+  const d=safeRead(STORE_KEY,null);
+  if(d&&typeof d==='object')return {...emptyData(),...d};
+  const birds=safeRead(oldBirdsKey,[]).map((b,i)=>({id:'b'+Date.now()+i,ring:String(b.ring||''),breed:b.breed||'غير محدد',sex:b.sex||'غير محدد',father:b.father||'',mother:b.mother||'',status:'سليم',birth:'',color:'',notes:'',createdAt:new Date().toISOString()}));
+  const pairs=safeRead(oldPairsKey,[]).map((p,i)=>({id:'p'+Date.now()+i,nest:p.nest||'',male:p.male||'',female:p.female||'',date:'',eggsLaid:Number(p.fertile)||0,fertile:Number(p.fertile)||0,hatched:0,weaned:Number(p.weaned)||0,status:'مكتملة',notes:'',successRate:Number(p.successRate)||0}));
+  return {...emptyData(),birds,pairs};
+}
+let data=loadData();
+const $=id=>document.getElementById(id);
+function saveData(){try{localStorage.setItem(STORE_KEY,JSON.stringify(data));return true}catch(e){toast('تعذر حفظ البيانات. قد تكون مساحة التخزين ممتلئة.');return false}}
+function uid(prefix){return prefix+'_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,8)}
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function fmt(n){return (Number(n)||0).toLocaleString('en-US',{maximumFractionDigits:2})}
+function today(){return new Date().toISOString().slice(0,10)}
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('show'),3000)}
+function showPage(page,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));$('page-'+page)?.classList.add('active');document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.page===page));if(page==='reports')renderReports();if(page==='pedigree')renderRelatedPairs();window.scrollTo({top:0,behavior:'smooth'})}
+function byId(type,id){return data[type].find(x=>x.id===id)}
+function birdByRing(ring){return data.birds.find(b=>b.ring===ring)}
+function statusBadge(status){let cls='';if(['علاج','تحت الملاحظة','جارية'].includes(status))cls='warn';if(['نافق','فشلت'].includes(status))cls='danger';if(['مباع','متوقفة'].includes(status))cls='neutral';return `<span class="badge ${cls}">${esc(status||'—')}</span>`}
+function setOptions(id,items,placeholder,selected=''){const el=$(id);if(!el)return;el.innerHTML=`<option value="">${esc(placeholder)}</option>`+items.map(x=>`<option value="${esc(x.value)}">${esc(x.label)}</option>`).join('');el.value=selected}
+function refreshDropdowns(){
+ const live=data.birds.filter(b=>!['مباع','نافق'].includes(b.status));
+ setOptions('maleSelect',live.filter(b=>b.sex==='ذكر').map(b=>({value:b.ring,label:b.ring+' — '+b.breed})),'اختر الذكر',$('maleSelect')?.value||'');
+ setOptions('femaleSelect',live.filter(b=>b.sex==='نتاية').map(b=>({value:b.ring,label:b.ring+' — '+b.breed})),'اختر النتاية',$('femaleSelect')?.value||'');
+ setOptions('pedigreeSelect',data.birds.map(b=>({value:b.ring,label:b.ring+' ('+b.sex+')'})),'اختر طائر',$('pedigreeSelect')?.value||'');
+ setOptions('healthBird',data.birds.map(b=>({value:b.ring,label:b.ring+' ('+b.sex+')'})),'الغية / طائر غير محدد',$('healthBird')?.value||'');
+ $('birdCodes').innerHTML=data.birds.map(b=>`<option value="${esc(b.ring)}">`).join('');
+ checkInbreeding();
+}
+function renderAll(){renderDashboard();renderBirds();renderPairs();renderHealth();renderCourses();renderFeed();renderExpenses();refreshDropdowns();renderDashboard();renderPedigreeIfSelected();renderRelatedPairs();renderReports()}
+function renderDashboard(){
+ $('todayLabel').textContent='ملخص الغية • '+new Date().toLocaleDateString('ar-EG',{year:'numeric',month:'long',day:'numeric'});
+ $('statBirds').textContent=data.birds.filter(b=>!['مباع','نافق'].includes(b.status)).length;
+ $('statPairs').textContent=data.pairs.length;
+ $('statChicks').textContent=data.pairs.reduce((s,p)=>s+(Number(p.weaned)||0),0);
+ $('statExpenses').textContent=fmt(data.expenses.filter(x=>x.type==='expense').reduce((s,x)=>s+Number(x.amount||0),0));
+ const fertile=data.pairs.reduce((s,p)=>s+(Number(p.fertile)||0),0),weaned=data.pairs.reduce((s,p)=>s+(Number(p.weaned)||0),0),rate=fertile?Math.round(weaned/fertile*100):0;
+ $('statFertile').textContent=fertile;$('statWeaned').textContent=weaned;$('statRate').textContent=rate+'%';$('rateBar').style.width=Math.min(rate,100)+'%';
+ const alerts=[];
+ const due=data.health.filter(h=>h.follow&&h.follow<=today());
+ if(due.length)alerts.push(`<div class="list-item"><span>📅 مواعيد متابعة صحية مستحقة أو متأخرة</span><strong>${due.length}</strong></div>`);
+ const courseDue=(data.healthCourses||[]).filter(c=>c.follow&&c.follow<=today()&&!['مكتمل','متوقف'].includes(c.status));
+ if(courseDue.length)alerts.push(`<div class="list-item"><span>🧪 متابعات كورسات مستحقة أو متأخرة</span><strong>${courseDue.length}</strong></div>`);
+ const observe=data.birds.filter(b=>['تحت الملاحظة','علاج'].includes(b.status));
+ if(observe.length)alerts.push(`<div class="list-item"><span>🩺 طيور تحت الملاحظة أو العلاج</span><strong>${observe.length}</strong></div>`);
+ const active=data.pairs.filter(p=>p.status==='جارية');
+ if(active.length)alerts.push(`<div class="list-item"><span>🥚 دورات إنتاج جارية</span><strong>${active.length}</strong></div>`);
+ $('dashboardAlerts').innerHTML=alerts.length?alerts.join(''):'<div class="success" style="padding:12px;border-radius:10px">لا توجد تنبيهات مسجلة حاليًا. راجع السجلات باستمرار.</div>';
+ const recent=[
+ ...data.birds.map(b=>({date:b.createdAt||'',text:'إضافة طائر '+b.ring,sub:'سجل الطيور'})),
+ ...data.pairs.map(p=>({date:p.date||'',text:'دورة إنتاج — '+p.nest,sub:'الأزواج والإنتاج'})),
+ ...data.health.map(h=>({date:h.date||'',text:'سجل صحي — '+(h.bird||'الغية'),sub:h.type||'الصحة'})),
+ ...data.expenses.map(e=>({date:e.date||'',text:(e.type==='income'?'إيراد':'مصروف')+' — '+e.category,sub:fmt(e.amount)+' ج.م'}))
+ ].sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,5);
+ $('recentActivity').innerHTML=recent.length?recent.map(r=>`<div class="list-item"><div><strong>${esc(r.text)}</strong><div class="small-kpi">${esc(r.sub)}</div></div><span class="muted">${esc(r.date||'—')}</span></div>`).join(''):'<div class="empty">ابدأ بإضافة طيور أو سجلات لتظهر هنا.</div>';
+}
+function resetBirdForm(){ $('birdForm').reset();$('birdId').value='';$('birdFormTitle').textContent='إضافة طائر جديد';$('birdStatus').value='سليم';}
+function saveBird(e){e.preventDefault();const id=$('birdId').value,ring=$('birdRing').value.trim();if(data.birds.some(b=>b.ring.toLowerCase()===ring.toLowerCase()&&b.id!==id)){toast('رقم الدبلة مسجل بالفعل. استخدم كودًا مختلفًا.');return}
+ const bird={id:id||uid('bird'),ring,breed:$('birdBreed').value.trim()||'غير محدد',sex:$('birdSex').value,status:$('birdStatus').value,birth:$('birdBirth').value,color:$('birdColor').value.trim(),father:$('fatherRing').value.trim(),mother:$('motherRing').value.trim(),notes:$('birdNotes').value.trim(),createdAt:byId('birds',id)?.createdAt||new Date().toISOString()};
+ if(bird.father===ring||bird.mother===ring){toast('لا يمكن تسجيل الطائر كأب أو أم لنفسه.');return}
+ if(id)data.birds=data.birds.map(b=>b.id===id?bird:b);else data.birds.push(bird);
+ saveData();resetBirdForm();renderAll();toast('تم حفظ بيانات الطائر بنجاح.')}
+function renderBirds(){const q=($('birdSearch')?.value||'').trim().toLowerCase(),f=$('birdFilter')?.value||'';const list=data.birds.filter(b=>(!f||b.status===f)&&[b.ring,b.breed,b.sex,b.color,b.father,b.mother].some(v=>String(v||'').toLowerCase().includes(q)));$('birdsTableBody').innerHTML=list.length?list.map(b=>`<tr><td><strong>${esc(b.ring)}</strong><div class="small-kpi">${esc(b.color||'')}</div></td><td>${esc(b.breed)}<div class="small-kpi">${esc(b.sex)}</div></td><td>${statusBadge(b.status)}</td><td>${esc(b.birth||'—')}</td><td>أب: ${esc(b.father||'—')}<br>أم: ${esc(b.mother||'—')}</td><td><div class="pill-row"><button class="btn btn-light btn-small" onclick="editBird('${b.id}')">تعديل</button><button class="btn btn-danger btn-small" onclick="deleteRecord('birds','${b.id}')">حذف</button></div></td></tr>`).join(''):'<tr><td colspan="6" class="empty">لا توجد طيور مطابقة.</td></tr>'}
+function editBird(id){const b=byId('birds',id);if(!b)return;showPage('birds');$('birdId').value=b.id;$('birdRing').value=b.ring;$('birdBreed').value=b.breed;$('birdSex').value=b.sex;$('birdStatus').value=b.status;$('birdBirth').value=b.birth||'';$('birdColor').value=b.color||'';$('fatherRing').value=b.father||'';$('motherRing').value=b.mother||'';$('birdNotes').value=b.notes||'';$('birdFormTitle').textContent='تعديل بيانات '+b.ring;window.scrollTo({top:0,behavior:'smooth'})}
+function resetPairForm(){ $('pairForm').reset();$('pairId').value='';$('pairDate').value=today();$('expectedHatch').value=addDaysISO(today(),18);$('eggsLaid').value=2;$('fertileEggs').value=2;$('hatchedEggs').value=0;$('weanedChicks').value=0;$('pairFormTitle').textContent='تسجيل دورة إنتاج';checkInbreeding()}
+function checkInbreeding(){const m=birdByRing($('maleSelect')?.value),f=birdByRing($('femaleSelect')?.value);let related=false;if(m&&f){related=!!((m.father&&m.father===f.father)||(m.mother&&m.mother===f.mother)||(m.father&&[f.father,f.mother].includes(m.ring))||(f.father&&[m.father,m.mother].includes(f.ring))||(m.mother&&[f.father,f.mother].includes(m.ring))||(f.mother&&[m.father,m.mother].includes(f.ring)))}$('inbreedingAlert')?.classList.toggle('hidden',!related)}
+function addDaysISO(date,days){if(!date)return '';const d=new Date(date+'T12:00:00');d.setDate(d.getDate()+days);return d.toISOString().slice(0,10)}
+function hatchInfo(p){const expected=p.expectedHatch||addDaysISO(p.date,18);if(!expected)return {date:'غير محدد',label:'أدخل تاريخ الدورة',cls:'neutral'};const diff=Math.ceil((new Date(expected+'T00:00:00')-new Date(today()+'T00:00:00'))/86400000);if(Number(p.hatched)>0)return {date:expected,label:'تم تسجيل الفقس',cls:''};if(diff>1)return {date:expected,label:'متبقي '+diff+' يوم',cls:''};if(diff===1)return {date:expected,label:'متبقي يوم واحد',cls:'warn'};if(diff===0)return {date:expected,label:'موعد الفقس المتوقع اليوم',cls:'warn'};return {date:expected,label:'متأخر '+Math.abs(diff)+' يوم',cls:'danger'}}
+function savePair(e){e.preventDefault();const id=$('pairId').value,male=$('maleSelect').value,female=$('femaleSelect').value;const laid=Number($('eggsLaid').value)||0,fertile=Number($('fertileEggs').value)||0,hatched=Number($('hatchedEggs').value)||0,weaned=Number($('weanedChicks').value)||0;
+ if(male&&female&&male===female){toast('لا يمكن اختيار الطائر نفسه كذكر وأنثى.');return}if(fertile>laid||hatched>fertile||weaned>hatched){if(!confirm('الأعداد المدخلة قد لا تتطابق (المخصب ≤ الموضوع، الفاقس ≤ المخصب، المفطوم ≤ الفاقس). هل تريد الحفظ على أي حال؟'))return}
+ const p={id:id||uid('pair'),nest:$('nestNo').value.trim(),male,female,date:$('pairDate').value||today(),expectedHatch:$('expectedHatch').value||'',eggsLaid:laid,fertile,hatched,weaned,status:$('cycleStatus').value,notes:$('pairNotes').value.trim(),successRate:fertile?Math.round(weaned/fertile*100):0};
+ if(id)data.pairs=data.pairs.map(x=>x.id===id?p:x);else data.pairs.push(p);saveData();resetPairForm();renderAll();toast('تم حفظ دورة الإنتاج.')}
+function renderPairs(){const q=($('pairSearch')?.value||'').toLowerCase();const list=data.pairs.filter(p=>[p.nest,p.male,p.female,p.status,p.notes].some(v=>String(v||'').toLowerCase().includes(q)));$('pairsTableBody').innerHTML=list.length?list.map(p=>{const h=hatchInfo(p);return `<tr><td>${esc(p.date||'—')}</td><td>${esc(p.nest)}</td><td>${esc(p.male||'—')} × ${esc(p.female||'—')}</td><td>${Number(p.eggsLaid)||0} / ${Number(p.fertile)||0} / ${Number(p.hatched)||0}</td><td>${Number(p.weaned)||0}</td><td><strong>${esc(h.date)}</strong><div><span class="badge ${h.cls}">${esc(h.label)}</span></div></td><td>${p.fertile?Math.round((Number(p.weaned)||0)/Number(p.fertile)*100):0}%</td><td>${statusBadge(p.status)}</td><td><div class="pill-row"><button class="btn btn-light btn-small" onclick="editPair('${p.id}')">تعديل</button><button class="btn btn-danger btn-small" onclick="deleteRecord('pairs','${p.id}')">حذف</button></div></td></tr>`}).join(''):'<tr><td colspan="9" class="empty">لا توجد دورات إنتاج مسجلة.</td></tr>'}
+function editPair(id){const p=byId('pairs',id);if(!p)return;showPage('breeding');$('pairId').value=p.id;$('nestNo').value=p.nest;$('pairDate').value=p.date||'';$('expectedHatch').value=p.expectedHatch||'';$('maleSelect').value=p.male||'';$('femaleSelect').value=p.female||'';$('eggsLaid').value=p.eggsLaid??p.fertile??0;$('fertileEggs').value=p.fertile||0;$('hatchedEggs').value=p.hatched||0;$('weanedChicks').value=p.weaned||0;$('cycleStatus').value=p.status||'جارية';$('pairNotes').value=p.notes||'';$('pairFormTitle').textContent='تعديل دورة الإنتاج';checkInbreeding()}
+function resetHealthForm(){ $('healthForm').reset();$('healthId').value='';$('healthDate').value=today();$('healthFormTitle').textContent='إضافة ملاحظة صحية'}
+function saveHealth(e){e.preventDefault();const id=$('healthId').value;const h={id:id||uid('health'),date:$('healthDate').value,bird:$('healthBird').value,type:$('healthType').value,follow:$('healthFollow').value,symptoms:$('healthSymptoms').value.trim(),notes:$('healthNotes').value.trim()};if(id)data.health=data.health.map(x=>x.id===id?h:x);else data.health.push(h);if(h.bird){const b=birdByRing(h.bird);if(b&&['ملاحظة / أعراض','علاج موصوف'].includes(h.type)&&b.status==='سليم')b.status='تحت الملاحظة';if(b&&h.type==='تحصين'){} }saveData();resetHealthForm();renderAll();toast('تم حفظ السجل الصحي.')}
+function renderHealth(){$('healthTableBody').innerHTML=data.health.length?data.health.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))).map(h=>`<tr><td>${esc(h.date)}</td><td>${esc(h.bird||'الغية')}</td><td>${esc(h.type)}</td><td>${esc(h.symptoms)}${h.notes?'<div class="small-kpi">'+esc(h.notes)+'</div>':''}</td><td>${h.follow?`<span class="badge ${h.follow<=today()?'warn':''}">${esc(h.follow)}</span>`:'—'}</td><td><div class="pill-row"><button class="btn btn-light btn-small" onclick="editHealth('${h.id}')">تعديل</button><button class="btn btn-danger btn-small" onclick="deleteRecord('health','${h.id}')">حذف</button></div></td></tr>`).join(''):'<tr><td colspan="6" class="empty">لا توجد سجلات صحية.</td></tr>'}
+function editHealth(id){const h=byId('health',id);if(!h)return;showPage('health');$('healthId').value=h.id;$('healthDate').value=h.date;$('healthBird').value=h.bird||'';$('healthType').value=h.type;$('healthFollow').value=h.follow||'';$('healthSymptoms').value=h.symptoms;$('healthNotes').value=h.notes||'';$('healthFormTitle').textContent='تعديل السجل الصحي'}
+function resetCourseForm(){ $('courseForm').reset();$('courseId').value='';$('courseStart').value=today();$('courseCost').value='0';$('courseStatus').value='مخطط'}
+function saveCourse(e){e.preventDefault();const id=$('courseId').value,old=id?byId('healthCourses',id):null;const c={id:id||uid('course'),name:$('courseName').value.trim(),purpose:$('coursePurpose').value,target:$('courseTarget').value.trim(),status:$('courseStatus').value,start:$('courseStart').value,end:$('courseEnd').value,follow:$('courseFollow').value,cost:Number($('courseCost').value)||0,ingredients:$('courseIngredients').value.trim(),notes:$('courseNotes').value.trim()};if(id)data.healthCourses=data.healthCourses.map(x=>x.id===id?c:x);else data.healthCourses.push(c);if(c.cost>0){const linkedId=old?.expenseLinked||uid('coursecost');c.expenseLinked=linkedId;const expense={id:linkedId,date:c.start,type:'expense',category:'أدوية ورعاية',description:'كورس: '+c.name+' ('+(c.target||'الغية')+')',amount:c.cost,courseLinked:c.id};const ix=data.expenses.findIndex(x=>x.id===linkedId);if(ix>=0)data.expenses[ix]=expense;else data.expenses.push(expense)}else if(old?.expenseLinked){data.expenses=data.expenses.filter(x=>x.id!==old.expenseLinked)}saveData();resetCourseForm();renderAll();toast('تم حفظ الكورس ومتابعته وكلفته.')}
+function renderCourses(){const rows=data.healthCourses||[];$('courseCostTotal').textContent='إجمالي الكلفة: '+fmt(rows.reduce((s,c)=>s+Number(c.cost||0),0))+' ج.م';$('coursesTableBody').innerHTML=rows.length?rows.slice().sort((a,b)=>String(b.start).localeCompare(String(a.start))).map(c=>`<tr><td><strong>${esc(c.name)}</strong><div class="small-kpi">${esc(c.ingredients||'')}</div><div class="small-kpi">${esc(c.notes||'')}</div></td><td>${esc(c.purpose)}<div class="small-kpi">${esc(c.target||'الغية')}</div></td><td>${esc(c.start||'—')}<div class="small-kpi">حتى ${esc(c.end||'غير محدد')}</div></td><td>${c.follow?`<span class="badge ${c.follow<=today()?'warn':''}">${esc(c.follow)}</span>`:'—'}</td><td><strong>${fmt(c.cost)} ج.م</strong></td><td>${statusBadge(c.status)}</td><td><div class="pill-row"><button class="btn btn-light btn-small" onclick="editCourse('${c.id}')">تعديل</button><button class="btn btn-danger btn-small" onclick="deleteRecord('healthCourses','${c.id}')">حذف</button></div></td></tr>`).join(''):'<tr><td colspan="7" class="empty">لا توجد كورسات مسجلة.</td></tr>'}
+function editCourse(id){const c=byId('healthCourses',id);if(!c)return;showPage('health');$('courseId').value=c.id;$('courseName').value=c.name||'';$('coursePurpose').value=c.purpose||'وقاية';$('courseTarget').value=c.target||'';$('courseStatus').value=c.status||'مخطط';$('courseStart').value=c.start||'';$('courseEnd').value=c.end||'';$('courseFollow').value=c.follow||'';$('courseCost').value=c.cost||0;$('courseIngredients').value=c.ingredients||'';$('courseNotes').value=c.notes||'';window.scrollTo({top:document.getElementById('courseForm').getBoundingClientRect().top+window.scrollY-20,behavior:'smooth'})}
+const feedIngredients=[['ذرة صفراء','mixYellowCorn'],['ذرة حمراء','mixRedCorn'],['بسلة بيضاء','mixWhitePeas'],['بسلة خضراء','mixGreenPeas'],['ذرة عويجة / سورجم','mixSorghum'],['بذر عباد الشمس','mixSunflower'],['قرطم','mixSafflower'],['حبة البركة','mixNigella'],['فول','mixFava'],['فاصوليا','mixBeans'],['لوبيا','mixCowpea'],['قمح','mixWheat'],['عدس أصفر','mixYellowLentil'],['بذر كتان','mixFlax']];
+function resetFeedTemplate(){const defaults={mixYellowCorn:30,mixRedCorn:0,mixWhitePeas:20,mixGreenPeas:0,mixSorghum:0,mixSunflower:3,mixSafflower:5,mixNigella:0,mixFava:15,mixBeans:0,mixCowpea:5,mixWheat:10,mixYellowLentil:10,mixFlax:2};Object.entries(defaults).forEach(([id,v])=>$(id).value=v);updateMixSum();calculateFeed()}
+function updateMixSum(){const sum=feedIngredients.reduce((s,x)=>s+(Number($(x[1])?.value)||0),0);if($('mixPercentSum')){$('mixPercentSum').textContent='مجموع النسب: '+fmt(sum)+'%';$('mixPercentSum').className='badge '+(Math.abs(sum-100)>.01?'warn':'')}return sum}
+function calculateFeed(){const weight=Number($('feedWeight').value);const vals=feedIngredients.map(([name,id])=>({name,pct:Number($(id).value)||0}));const sum=updateMixSum();if(!(weight>0)){toast('أدخل وزنًا أكبر من صفر.');return}if(vals.some(x=>x.pct<0)||sum<=0||Math.abs(sum-100)>.01){$('feedResult').innerHTML=`<span style="color:var(--danger)">مجموع النسب الحالي ${fmt(sum)}%. يجب أن يساوي 100% بالضبط قبل حساب المقادير.</span>`;return}const used=vals.filter(x=>x.pct>0);$('feedResult').innerHTML='<strong>المقادير المطلوبة:</strong>'+used.map(x=>`<div class="list-item"><span>${esc(x.name)} (${fmt(x.pct)}%)</span><strong>${fmt(weight*x.pct/100)} كجم <span class="small-kpi">(${fmt(weight*x.pct*10)} جم)</span></strong></div>`).join('')+`<div class="divider"></div><strong>الإجمالي: ${fmt(weight)} كجم (${fmt(weight*1000)} جم)</strong><p class="hint">هذه حاسبة نسب وأوزان فقط؛ راجع توازن الخلطة حسب عمر الحمام وحالته الإنتاجية، ولا تستخدم البقوليات أو البذور بكميات غير مناسبة.</p>`}
+
+function saveFeedPurchase(e){e.preventDefault();const f={id:uid('feed'),date:$('feedPurchaseDate').value,type:$('feedType').value.trim(),qty:Number($('feedQty').value),price:Number($('feedPrice').value)};data.feedPurchases.push(f);data.expenses.push({id:uid('exp'),date:f.date,type:'expense',category:'علف',description:`شراء ${f.type} — ${f.qty} كجم`,amount:f.price,feedLinked:f.id});saveData();$('feedPurchaseForm').reset();$('feedPurchaseDate').value=today();renderAll();toast('تم تسجيل شراء العلف وإضافته للمصروفات.')}
+function renderFeed(){$('feedTotalQty').textContent=fmt(data.feedPurchases.reduce((s,f)=>s+Number(f.qty||0),0))+' كجم';$('feedTotalCost').textContent=fmt(data.feedPurchases.reduce((s,f)=>s+Number(f.price||0),0))+' ج.م';$('feedTableBody').innerHTML=data.feedPurchases.length?data.feedPurchases.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))).map(f=>`<tr><td>${esc(f.date)}</td><td>${esc(f.type)}</td><td>${fmt(f.qty)} كجم</td><td>${fmt(f.price)} ج.م</td><td>${f.qty?fmt(f.price/f.qty):'—'} ج.م</td><td><button class="btn btn-danger btn-small" onclick="deleteRecord('feedPurchases','${f.id}')">حذف</button></td></tr>`).join(''):'<tr><td colspan="6" class="empty">لا توجد مشتريات علف مسجلة.</td></tr>'}
+function saveExpense(e){e.preventDefault();data.expenses.push({id:uid('exp'),date:$('expenseDate').value,type:$('expenseType').value,category:$('expenseCategory').value,amount:Number($('expenseAmount').value),description:$('expenseDescription').value.trim()});saveData();$('expenseForm').reset();$('expenseDate').value=today();renderAll();toast('تم تسجيل العملية المالية.')}
+function renderExpenses(){const f=$('expenseFilter')?.value||'',list=data.expenses.filter(x=>!f||x.type===f).sort((a,b)=>String(b.date).localeCompare(String(a.date)));$('expensesTableBody').innerHTML=list.length?list.map(x=>`<tr><td>${esc(x.date)}</td><td>${x.type==='income'?'<span class="badge">إيراد</span>':'<span class="badge warn">مصروف</span>'}</td><td>${esc(x.category)}</td><td>${esc(x.description||'—')}</td><td><strong>${fmt(x.amount)} ج.م</strong></td><td><button class="btn btn-danger btn-small" onclick="deleteRecord('expenses','${x.id}')">حذف</button></td></tr>`).join(''):'<tr><td colspan="6" class="empty">لا توجد عمليات مالية.</td></tr>';const income=data.expenses.filter(x=>x.type==='income').reduce((s,x)=>s+Number(x.amount||0),0),expense=data.expenses.filter(x=>x.type==='expense').reduce((s,x)=>s+Number(x.amount||0),0);$('expenseTotal').textContent=fmt(expense);$('incomeTotal').textContent=fmt(income);$('netTotal').textContent=fmt(income-expense);$('transactionCount').textContent=data.expenses.length}
+function renderPedigreeIfSelected(){if($('pedigreeSelect')?.value)showPedigree()}
+function showPedigree(){const ring=$('pedigreeSelect').value,b=birdByRing(ring);if(!b){$('pedigreeResult').innerHTML='<div class="empty">اختر طائرًا لعرض بيانات النسب.</div>';return}const father=birdByRing(b.father),mother=birdByRing(b.mother),cycles=data.pairs.filter(p=>p.male===ring||p.female===ring);$('pedigreeResult').innerHTML=`<div class="grid two-col"><div class="card"><h3>🕊️ بيانات الطائر</h3><div class="list-item"><span>الدبلة</span><strong>${esc(b.ring)}</strong></div><div class="list-item"><span>النوع / الجنس</span><strong>${esc(b.breed)} / ${esc(b.sex)}</strong></div><div class="list-item"><span>الحالة</span>${statusBadge(b.status)}</div><div class="list-item"><span>اللون</span><strong>${esc(b.color||'—')}</strong></div><div class="list-item"><span>تاريخ الفقس</span><strong>${esc(b.birth||'—')}</strong></div><p>${esc(b.notes||'لا توجد ملاحظات.')}</p></div><div class="card"><h3>🌳 النسب المسجل</h3><div class="list-item"><span>الأب</span><strong>${esc(b.father||'غير مسجل')}${father?' — '+esc(father.breed):''}</strong></div><div class="list-item"><span>الأم</span><strong>${esc(b.mother||'غير مسجل')}${mother?' — '+esc(mother.breed):''}</strong></div><div class="list-item"><span>دورات الإنتاج المرتبطة</span><strong>${cycles.length}</strong></div></div></div>${cycles.length?'<h3 style="margin-top:16px">دورات الإنتاج</h3>'+cycles.map(p=>`<div class="list-item"><span>${esc(p.nest)} • ${esc(p.date||'')}</span><strong>${Number(p.weaned)||0} زغلول مفطوم</strong></div>`).join(''):''}`}
+function renderRelatedPairs(){if(!$('relatedPairs'))return;const related=[];for(const m of data.birds.filter(b=>b.sex==='ذكر'))for(const f of data.birds.filter(b=>b.sex==='نتاية'))if(m.ring!==f.ring&&((m.father&&m.father===f.father)||(m.mother&&m.mother===f.mother)))related.push({m:m.ring,f:f.ring});$('relatedPairs').innerHTML=related.length?related.map(x=>`<div class="list-item"><span>${esc(x.m)} × ${esc(x.f)}</span><span class="badge warn">أب أو أم مشتركة</span></div>`).join(''):'<p class="muted">لا توجد قرابة من الدرجة المباشرة مكتشفة حسب البيانات المسجلة. هذا لا ينفي وجود قرابة إذا كانت بيانات النسب ناقصة.</p>'}
+function askAssistant(e){e.preventDefault();const q=$('aiQuery').value.trim();if(!q)return;appendMessage('user',q);$('aiQuery').value='';let answer='أقدر أساعدك في تنظيم السجلات ومتابعة الرعاية، لكن هذه النسخة لا تتصل بذكاء اصطناعي مباشر. وضّح لي التفاصيل وسأعرض إرشادات عامة آمنة.';const s=q.toLowerCase();if(/إسهال|براز|اخضر|أخضر|مرض|تعب|خمول|تنفس|علاج|دواء|مريض/.test(s)){answer='لو فيه أعراض مرضية عند الحمام: راقب عدد الطيور المتأثرة، الشهية والشرب والنشاط، شكل البراز ومدة الأعراض. وفّر مياه نظيفة ونظّف المشارب والمعالف، وقلّل الاحتكاك قدر الإمكان. لا تعطِ مضادًا حيويًا أو جرعة جماعية عشوائيًا؛ السبب قد يكون معديًا أو غذائيًا أو طفيليًا ويحتاج تقييمًا بيطريًا. اطلب طبيبًا بسرعة عند خمول شديد أو صعوبة تنفس أو امتناع عن الأكل أو انتشار سريع. سجّل الأعراض والتاريخ هنا في قسم الصحة.'}else if(/علف|كلفة|أكل|تغذية|خلطة/.test(s)){answer='للتغذية، اجعل الخلطة مناسبة لعمر الحمام وحالته (تفريخ، زغاليل، راحة) وتجنب الاعتماد على مكوّن واحد. وفّر مياهًا نظيفة باستمرار ومصدرًا مناسبًا للمعادن/الحصى المخصص للحمام. يمكنك استخدام حاسبة التغذية في التطبيق لحساب أوزان خلطة مجموع نسبها 100%، مع مراجعة احتياجات الطيور حسب المرحلة.'}else if(/تزاوج|بيض|فقس|زغاليل|إنتاج|نسب/.test(s)){answer='لتقييم الإنتاج، سجّل كل دورة منفصلة: العين، الذكر والأنثى، البيض الموضوع، المخصب، الفاقس، والمفطوم. لا تعتمد على دورة واحدة للحكم على الزوج، وراجع العمر والتغذية والبيئة وصحة الأبوين. افحص شجرة النسب قبل التزاوج، مع العلم أن البيانات الناقصة قد تخفي القرابة.'}else if(/نسخة|احتياط|بيانات|تصدير/.test(s)){answer='لحماية بياناتك، اضغط «نسخة احتياطية» أعلى الصفحة لتنزيل ملف JSON، واحتفظ بنسخة على جهاز آخر. البيانات الحالية محلية في المتصفح ولا تتم مزامنتها تلقائيًا بين الأجهزة.'}appendMessage('ai',answer)}
+function appendMessage(type,text){const box=$('chatBox'),d=document.createElement('div');d.className='message '+type;d.textContent=text;box.appendChild(d);box.scrollTop=box.scrollHeight}
+function clearChat(){$('chatBox').innerHTML='<div class="message ai">تم مسح المحادثة. اكتب سؤالك الجديد.</div>'}
+function renderReports(){if(!$('sexReport'))return;const groups=(arr,key)=>arr.reduce((o,x)=>{const k=x[key]||'غير محدد';o[k]=(o[k]||0)+1;return o},{});$('sexReport').innerHTML=reportBars(groups(data.birds,'sex'));$('statusReport').innerHTML=reportBars(groups(data.birds,'status'));const fertile=data.pairs.reduce((s,p)=>s+(Number(p.fertile)||0),0),hatched=data.pairs.reduce((s,p)=>s+(Number(p.hatched)||0),0),weaned=data.pairs.reduce((s,p)=>s+(Number(p.weaned)||0),0);$('productionReport').innerHTML=`<div class="list-item"><span>دورات الإنتاج</span><strong>${data.pairs.length}</strong></div><div class="list-item"><span>بيض مخصب</span><strong>${fertile}</strong></div><div class="list-item"><span>بيض فاقس</span><strong>${hatched}</strong></div><div class="list-item"><span>زغاليل مفطومة</span><strong>${weaned}</strong></div><div class="list-item"><span>الفطام / البيض المخصب</span><strong>${fertile?Math.round(weaned/fertile*100):0}%</strong></div>`;const inc=data.expenses.filter(x=>x.type==='income').reduce((s,x)=>s+Number(x.amount||0),0),exp=data.expenses.filter(x=>x.type==='expense').reduce((s,x)=>s+Number(x.amount||0),0);$('financialReport').innerHTML=`<div class="list-item"><span>الإيرادات</span><strong>${fmt(inc)} ج.م</strong></div><div class="list-item"><span>المصروفات</span><strong>${fmt(exp)} ج.م</strong></div><div class="list-item"><span>الصافي</span><strong>${fmt(inc-exp)} ج.م</strong></div>`}
+function reportBars(obj){const entries=Object.entries(obj);if(!entries.length)return '<p class="muted">لا توجد بيانات بعد.</p>';const max=Math.max(...entries.map(x=>x[1]),1);return entries.map(([name,n])=>`<div style="margin:12px 0"><div class="list-item" style="padding:0 0 5px;border:0"><span>${esc(name)}</span><strong>${n}</strong></div><div class="progress"><span style="width:${n/max*100}%"></span></div></div>`).join('')}
+function exportBackup(){const payload={app:'Moaz Loft Pro',version:3,exportedAt:new Date().toISOString(),data};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json;charset=utf-8'});downloadBlob(blob,'Moaz_Loft_Pro_Backup_'+today()+'.json');toast('تم تجهيز النسخة الاحتياطية.')}
+function downloadBlob(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function importBackup(event){const file=event.target.files?.[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const parsed=JSON.parse(reader.result);const incoming=parsed.data||parsed;if(!incoming||!Array.isArray(incoming.birds)||!Array.isArray(incoming.pairs))throw new Error('invalid');if(!confirm('سيتم استبدال البيانات الحالية بالنسخة المستوردة. هل تريد المتابعة؟'))return;data={...emptyData(),...incoming};saveData();renderAll();toast('تم استيراد البيانات بنجاح.')}catch(err){toast('الملف غير صالح أو ليس نسخة احتياطية متوافقة.')}finally{$('importFile').value=''}};reader.readAsText(file)}
+function exportCSV(type){const map={birds:{name:'birds',rows:data.birds,headers:{ring:'الدبلة',breed:'النوع',sex:'الجنس',status:'الحالة',birth:'تاريخ الفقس',father:'الأب',mother:'الأم',color:'اللون',notes:'ملاحظات'}},pairs:{name:'production',rows:data.pairs,headers:{date:'التاريخ',expectedHatch:'الفقس المتوقع',nest:'العين',male:'الذكر',female:'النتاية',eggsLaid:'البيض الموضوع',fertile:'المخصب',hatched:'الفاقس',weaned:'المفطوم',status:'الحالة',notes:'ملاحظات'}},health:{name:'health',rows:data.health,headers:{date:'التاريخ',bird:'الطائر',type:'نوع السجل',symptoms:'الأعراض / الإجراء',follow:'المتابعة',notes:'ملاحظات'}},courses:{name:'health_courses',rows:data.healthCourses||[],headers:{name:'اسم الكورس',purpose:'الغرض',target:'المستهدف',status:'الحالة',start:'البداية',end:'النهاية',follow:'المتابعة',cost:'الكلفة',ingredients:'المكونات',notes:'ملاحظات'}},expenses:{name:'finance',rows:data.expenses,headers:{date:'التاريخ',type:'النوع',category:'التصنيف',description:'الوصف',amount:'المبلغ'}}};const spec=map[type];const keys=Object.keys(spec.headers);const csv=[keys.map(k=>csvCell(spec.headers[k])).join(','),...spec.rows.map(r=>keys.map(k=>csvCell(r[k]??'')).join(','))].join('\r\n');downloadBlob(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}),'Moaz_Loft_'+spec.name+'.csv')}
+function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+function deleteRecord(type,id){if(!confirm('هل أنت متأكد من حذف هذا السجل؟ لا يمكن التراجع عن الحذف.'))return;if(type==='feedPurchases'){const f=byId(type,id);if(f)data.expenses=data.expenses.filter(e=>e.feedLinked!==f.id)}if(type==='healthCourses'){const c=byId(type,id);if(c?.expenseLinked)data.expenses=data.expenses.filter(e=>e.id!==c.expenseLinked)}data[type]=data[type].filter(x=>x.id!==id);saveData();renderAll();toast('تم حذف السجل.')}
+function clearAllData(){if(!confirm('تحذير: سيتم حذف كل بيانات الغية من هذا المتصفح نهائيًا. هل تريد المتابعة؟'))return;if(!confirm('تأكيد أخير: هل صدّرت نسخة احتياطية وتريد حذف كل البيانات؟'))return;data=emptyData();saveData();localStorage.removeItem(oldBirdsKey);localStorage.removeItem(oldPairsKey);renderAll();toast('تم حذف كل البيانات.')}
+function init(){const dateIds=['pairDate','healthDate','feedPurchaseDate','expenseDate','courseStart'];dateIds.forEach(id=>{if($(id))$(id).value=today()});if($('expectedHatch'))$('expectedHatch').value=addDaysISO(today(),18);document.querySelectorAll('.mix-pct').forEach(el=>el.addEventListener('input',updateMixSum));renderAll();calculateFeed();if(data.birds.length||data.pairs.length)saveData()}
+$('maleSelect').addEventListener('change',checkInbreeding);$('femaleSelect').addEventListener('change',checkInbreeding);$('pairDate').addEventListener('change',()=>{const current=$('expectedHatch').value,previous=addDaysISO(today(),18);if(!current||current===previous)$('expectedHatch').value=addDaysISO($('pairDate').value,18)});
+init();
+</script>
+<!-- ===== Moaz Loft 2100 — الصق هذا الملف كله قبل </body> مباشرة (بعد </script> الأخير) ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style id="loft2100">
+body{font-family:Cairo,Tahoma,"Segoe UI",sans-serif}
+html[data-theme=neo]{--bg:#050816;--surface:#0b1328cc;--ink:#e8f2ff;--muted:#8fa6cc;--line:#1a2b52;--primary:#2ee6ff;--primary2:#8af2ff;--accent:#0d2b45;--shadow:0 12px 40px #0009}
+html[data-theme=neo] body{background:radial-gradient(1100px 560px at 85% -10%,#2a1470aa,transparent),radial-gradient(900px 500px at 0 100%,#2ee6ff1c,transparent),var(--bg)}
+html[data-theme=neo] .app-header{background:linear-gradient(120deg,#070b20,#0b2a5c 55%,#3b1d8f);border-bottom:1px solid #2ee6ff44}
+html[data-theme=neo] .logo{border-color:#2ee6ff88;box-shadow:0 0 22px #2ee6ff55}
+html[data-theme=neo] .card,html[data-theme=neo] .sidebar{background:var(--surface);backdrop-filter:blur(14px);border-color:var(--line)}
+html[data-theme=neo] .card:hover{border-color:#2ee6ff77;box-shadow:0 0 30px #2ee6ff22}
+html[data-theme=neo] .card h3,html[data-theme=neo] label{color:#cfe3ff}
+html[data-theme=neo] .nav-btn{color:#a9bddb}
+html[data-theme=neo] .nav-btn:hover{background:#2ee6ff14}
+html[data-theme=neo] .nav-btn.active{background:linear-gradient(270deg,#2ee6ff26,transparent);color:#8af2ff;box-shadow:inset -3px 0 0 #2ee6ff}
+html[data-theme=neo] input,html[data-theme=neo] select,html[data-theme=neo] textarea{background:#060c1ecc;border-color:var(--line);color:var(--ink)}
+html[data-theme=neo] input:focus,html[data-theme=neo] select:focus,html[data-theme=neo] textarea:focus{border-color:#2ee6ff;box-shadow:0 0 0 3px #2ee6ff2a,0 0 18px #2ee6ff33}
+html[data-theme=neo] table{background:#0a1226}
+html[data-theme=neo] th{background:#111d3d;color:#9fe9ff}
+html[data-theme=neo] td,html[data-theme=neo] .table-wrap{border-color:var(--line)}
+html[data-theme=neo] tbody tr:hover{background:#2ee6ff0f}
+html[data-theme=neo] .btn-primary{background:linear-gradient(135deg,#00b8d4,#6d4aff);color:#fff;box-shadow:0 0 22px #2ee6ff44}
+html[data-theme=neo] .btn-light{background:#111d3d;color:var(--ink);border-color:var(--line)}
+html[data-theme=neo] .btn-danger{background:#3a1020;color:#ff8fa3;border-color:#6b1d36}
+html[data-theme=neo] .badge{background:#2ee6ff22;color:#8af2ff}
+html[data-theme=neo] .badge.warn{background:#ffb30028;color:#ffd166}
+html[data-theme=neo] .badge.danger{background:#ff2b5a28;color:#ff7a95}
+html[data-theme=neo] .badge.neutral{background:#ffffff14;color:#b8c4dc}
+html[data-theme=neo] .notice{background:#2a2108;color:#ffd98a;border-color:#5b4710}
+html[data-theme=neo] .success{background:#06281f;color:#6ff2c0;border-color:#0d5a43}
+html[data-theme=neo] .chat,html[data-theme=neo] .risk-box{background:#0a1226;border-color:var(--line)}
+html[data-theme=neo] .message.ai{background:#0d2b45}
+html[data-theme=neo] .message.user{background:#1a2250}
+html[data-theme=neo] .stat-icon{background:linear-gradient(145deg,#2ee6ff33,#8b5cf633)}
+html[data-theme=neo] .stat-value{background:linear-gradient(90deg,#fff,#8af2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+html[data-theme=neo] .progress{background:#14213f}
+html[data-theme=neo] .progress span{background:linear-gradient(90deg,#2ee6ff,#8b5cf6);box-shadow:0 0 12px #2ee6ff}
+html[data-theme=neo] .toast{background:#0b2a5c;border:1px solid #2ee6ff}
+#fx{position:fixed;inset:0;z-index:-1;pointer-events:none}
+html:not([data-theme=neo]) #fx{display:none}
+.page.active{animation:pgin .3s ease}@keyframes pgin{from{opacity:0;transform:translateY(8px)}}
+#pal{position:fixed;inset:0;background:#000b;backdrop-filter:blur(6px);display:none;place-items:start center;padding-top:12vh;z-index:50}
+#pal.on{display:grid}
+#pal>div{width:min(92vw,440px);background:#0b1226;border:1px solid #2ee6ff66;border-radius:16px;padding:12px;box-shadow:0 0 40px #2ee6ff33}
+#pal input{background:#060c1e;color:#e8f2ff;border-color:#1a2b52}
+#pal ul{list-style:none;margin:8px 0 0;padding:0;max-height:50vh;overflow:auto}
+#pal li{padding:10px 12px;border-radius:10px;cursor:pointer;color:#cfe3ff}
+#pal li:hover,#pal li:first-child{background:#2ee6ff1f}
+@media print{#fx,#pal{display:none!important}}
+@media(prefers-reduced-motion:reduce){.page.active{animation:none}}
+</style>
+<script>
+(()=>{
+const root=document.documentElement,$$=s=>document.querySelector(s);
+let prev;
+
+/* إصلاحات */
+window.today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+const oh=window.hatchInfo;
+window.hatchInfo=p=>['مكتملة','فشلت','متوقفة'].includes(p.status)?{date:p.expectedHatch||addDaysISO(p.date,18)||'—',label:p.status,cls:'neutral'}:oh(p);
+
+/* رسم مالي: آخر 6 شهور */
+const host=document.createElement('div');host.className='card';host.style.margin='0 0 16px';
+host.innerHTML='<h3>📊 الحركة المالية — آخر 6 أشهر</h3><div id="finChart"></div>';
+$$('#page-dashboard .stats').after(host);
+function drawChart(){
+  const el=document.getElementById('finChart');if(!el)return;
+  const n=new Date(),m=[];
+  for(let i=5;i>=0;i--){const d=new Date(n.getFullYear(),n.getMonth()-i,1);m.push({k:d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0'),l:d.toLocaleDateString('ar-EG',{month:'short'}),i:0,e:0})}
+  data.expenses.forEach(x=>{const r=m.find(o=>o.k===String(x.date).slice(0,7));if(r)r[x.type==='income'?'i':'e']+=Number(x.amount)||0});
+  const mx=Math.max(1,...m.flatMap(o=>[o.i,o.e]));
+  el.innerHTML='<svg viewBox="0 0 600 185" style="width:100%;height:auto">'+m.map((o,j)=>{const x=30+(5-j)*92,a=o.i/mx*130,b=o.e/mx*130;return `<rect x="${x}" y="${150-a}" width="28" height="${a}" rx="5" fill="#2ee6a6"/><rect x="${x+32}" y="${150-b}" width="28" height="${b}" rx="5" fill="#ff5c8a"/><text x="${x+30}" y="171" text-anchor="middle" font-size="12" fill="currentColor" opacity=".7">${o.l}</text>`}).join('')+'</svg><div class="pill-row"><span class="badge">■ إيراد</span><span class="badge danger">■ مصروف</span></div>';
+}
+
+/* عدّاد متحرك للأرقام */
+const cu=el=>{const t=parseFloat(String(el.textContent).replace(/,/g,''));if(isNaN(t)||el.dataset.v==t)return;el.dataset.v=t;const sfx=el.textContent.replace(/[\d.,]/g,''),s=performance.now();(function f(now){const k=Math.min((now-s)/700,1);el.textContent=fmt(k<1?Math.round(t*k):t)+sfx;if(k<1)requestAnimationFrame(f)})(s)};
+const od=window.renderDashboard;
+window.renderDashboard=()=>{od();document.querySelectorAll('#page-dashboard .stat-value,#statFertile,#statWeaned,#statRate').forEach(cu);drawChart()};
+
+/* الثيم */
+const tb=document.createElement('button');
+const setT=t=>{root.dataset.theme=t;try{localStorage.setItem('loft_theme',t)}catch{}tb.textContent=t==='neo'?'☀️ فاتح':'🌌 2100';$$('meta[name=theme-color]').content=t==='neo'?'#050816':'#1769e0'};
+tb.onclick=()=>setT(root.dataset.theme==='neo'?'light':'neo');
+const pb=document.createElement('button');pb.textContent='⌘ بحث سريع';
+$$('.header-actions').prepend(pb,tb);
+setT((()=>{try{return localStorage.getItem('loft_theme')}catch{}})()||'neo');
+addEventListener('beforeprint',()=>{prev=root.dataset.theme;root.dataset.theme='light'});
+addEventListener('afterprint',()=>{root.dataset.theme=prev||'neo'});
+
+/* خلفية الجسيمات */
+const c=document.createElement('canvas');c.id='fx';document.body.prepend(c);
+const g=c.getContext('2d');let W,H,P=[];
+const rs=()=>{W=c.width=innerWidth;H=c.height=innerHeight;P=Array.from({length:Math.min(70,W/18|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3}))};
+const calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const loop=()=>{g.clearRect(0,0,W,H);
+  if(root.dataset.theme==='neo'&&!calm){
+    for(const p of P){p.x=(p.x+p.vx+W)%W;p.y=(p.y+p.vy+H)%H;g.fillStyle='#2ee6ff';g.fillRect(p.x,p.y,1.6,1.6)}
+    for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const dx=P[i].x-P[j].x,dy=P[i].y-P[j].y,d=dx*dx+dy*dy;if(d<14000){g.strokeStyle='rgba(46,230,255,'+.16*(1-d/14000)+')';g.beginPath();g.moveTo(P[i].x,P[i].y);g.lineTo(P[j].x,P[j].y);g.stroke()}}
+  }
+  requestAnimationFrame(loop)};
+addEventListener('resize',rs);rs();loop();
+
+/* بحث سريع Ctrl+K */
+const pal=document.createElement('div');pal.id='pal';pal.innerHTML='<div><input placeholder="اذهب إلى…"><ul></ul></div>';document.body.append(pal);
+const nb=[...document.querySelectorAll('.nav-btn')],ul=pal.querySelector('ul'),pi=pal.querySelector('input');
+const fill=()=>{ul.innerHTML='';nb.filter(b=>b.textContent.includes(pi.value.trim())).forEach(b=>{const li=document.createElement('li');li.textContent=b.textContent.trim();li.onclick=()=>{b.click();pal.classList.remove('on')};ul.append(li)})};
+const openPal=()=>{pal.classList.add('on');pi.value='';fill();pi.focus()};
+pb.onclick=openPal;pi.oninput=fill;
+pal.onclick=e=>{if(e.target===pal)pal.classList.remove('on')};
+addEventListener('keydown',e=>{
+  if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();pal.classList.contains('on')?pal.classList.remove('on'):openPal()}
+  if(e.key==='Escape')pal.classList.remove('on');
+  if(e.key==='Enter'&&pal.classList.contains('on'))ul.firstChild?.click()});
+
+renderDashboard();
+})();
+</script>
+<!-- ===== Moaz Loft — باتش 2: الصقه بعد باتش 2100 وقبل </body> ===== -->
+<style id="loft-p2">
+html.locked body>*:not(#lock){visibility:hidden}
+#lock{position:fixed;inset:0;z-index:99;background:#050816;display:none;place-items:center}
+html.locked #lock{display:grid}
+#lock>div{width:min(90vw,320px);text-align:center;color:#e8f2ff;background:#0b1226;border:1px solid #2ee6ff66;border-radius:18px;padding:24px;box-shadow:0 0 40px #2ee6ff33}
+#lock input{background:#060c1e;color:#e8f2ff;text-align:center;letter-spacing:6px;margin:12px 0}
+#lock p{color:#ff8fa3;min-height:1.4em;margin:8px 0 0}
+#undo{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#0b2a5c;color:#fff;border:1px solid #2ee6ff;border-radius:12px;padding:10px 14px;z-index:20;display:none;gap:12px;align-items:center}
+#undo.on{display:flex}
+</style>
+<script>
+(()=>{
+const $$=s=>document.querySelector(s),LS=(k,v)=>{try{return v===undefined?localStorage.getItem(k):localStorage.setItem(k,v)}catch{return null}};
+
+/* 1) استيراد آمن: يتحقق من كل الأقسام وينظّف المعرّفات */
+window.importBackup=ev=>{const f=ev.target.files?.[0];if(!f)return;const r=new FileReader();
+ r.onload=()=>{try{const p=JSON.parse(r.result),inc=p.data||p;if(!inc||!Array.isArray(inc.birds)||!Array.isArray(inc.pairs))throw 0;
+  const clean={};Object.keys(emptyData()).forEach(k=>clean[k]=(Array.isArray(inc[k])?inc[k]:[]).filter(x=>x&&typeof x==='object').map(x=>({...x,id:String(x.id||uid(k)).replace(/[^\w-]/g,'')})));
+  if(!confirm('سيتم استبدال البيانات الحالية بالنسخة المستوردة ('+clean.birds.length+' طائر، '+clean.pairs.length+' دورة). متابعة؟'))return;
+  data=clean;saveData();renderAll();toast('تم استيراد البيانات بنجاح.')}catch{toast('الملف غير صالح أو ليس نسخة احتياطية متوافقة.')}finally{$$('#importFile').value=''}};
+ r.readAsText(f)};
+
+/* 2) حذف آمن: تحذير للطيور المرتبطة + زر تراجع */
+const ub=document.createElement('div');ub.id='undo';ub.innerHTML='<span>تم الحذف</span><button class="btn btn-light btn-small">↩ تراجع</button>';document.body.append(ub);
+let snap=null,ut;
+ub.querySelector('button').onclick=()=>{if(!snap)return;data=JSON.parse(snap);saveData();renderAll();ub.classList.remove('on');toast('تم التراجع عن الحذف.')};
+const odr=window.deleteRecord;
+window.deleteRecord=(t,id)=>{
+ if(t==='birds'){const b=byId('birds',id);if(b){const n=data.pairs.filter(p=>p.male===b.ring||p.female===b.ring).length+data.birds.filter(x=>x.father===b.ring||x.mother===b.ring).length+data.health.filter(h=>h.bird===b.ring).length;
+  if(n&&!confirm('هذا الطائر مرتبط بـ '+n+' سجل (إنتاج / نسب / صحة). السجلات ستبقى بكوده فقط. هل تريد المتابعة؟'))return}}
+ const before=JSON.stringify(data);odr(t,id);
+ if(JSON.stringify(data)!==before){snap=before;ub.classList.add('on');clearTimeout(ut);ut=setTimeout(()=>ub.classList.remove('on'),8000)}};
+
+/* 3) قفل بالرقم السري (شاشة خصوصية وليست تشفيرًا للبيانات) */
+const H=async s=>{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('loft:'+s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')};
+const lk=document.createElement('div');lk.id='lock';lk.innerHTML='<div><h2>🔒 Moaz Loft</h2><input type="password" inputmode="numeric" placeholder="الرقم السري"><button class="btn btn-primary">فتح</button><p></p></div>';document.body.append(lk);
+const li=lk.querySelector('input'),lm=lk.querySelector('p');
+const tryOpen=async()=>{if(await H(li.value)===LS('loft_pin')){document.documentElement.classList.remove('locked');li.value='';lm.textContent=''}else{lm.textContent='الرقم السري غير صحيح.';li.value=''}};
+lk.querySelector('button').onclick=tryOpen;li.onkeydown=e=>{if(e.key==='Enter')tryOpen()};
+if(LS('loft_pin'))document.documentElement.classList.add('locked');
+const pc=document.createElement('div');pc.className='card';
+pc.innerHTML='<h3>🔒 قفل التطبيق</h3><p class="muted">رقم سري يمنع فتح التطبيق على هذا الجهاز. هو للخصوصية فقط ولا يشفّر البيانات المخزنة.</p><div class="actions"><button class="btn btn-primary" id="pinSet">تعيين / تغيير الرقم</button><button class="btn btn-light" id="pinOff">إزالة القفل</button></div>';
+$$('#page-settings .grid').append(pc);
+$$('#pinSet').onclick=async()=>{if(LS('loft_pin')&&await H(prompt('اكتب الرقم السري الحالي')||'')!==LS('loft_pin'))return toast('الرقم الحالي غير صحيح.');const p=prompt('اكتب رقمًا سريًا جديدًا (4 أرقام على الأقل)')||'';if(p.length<4)return toast('الرقم قصير. استخدم 4 أرقام على الأقل.');LS('loft_pin',await H(p));toast('تم تعيين الرقم السري.')};
+$$('#pinOff').onclick=async()=>{if(!LS('loft_pin'))return toast('لا يوجد قفل مفعّل.');if(await H(prompt('اكتب الرقم السري الحالي')||'')!==LS('loft_pin'))return toast('الرقم غير صحيح.');localStorage.removeItem('loft_pin');toast('تم إلغاء القفل.')};
+
+/* 4) تذكير النسخة الاحتياطية الأسبوعي */
+const bn=document.createElement('div');bn.className='notice';bn.style.display='none';
+bn.innerHTML='💾 مر أكثر من 7 أيام على آخر نسخة احتياطية. <button class="btn btn-light btn-small" onclick="exportBackup()">نزّل نسخة الآن</button>';
+$$('#page-dashboard .page-heading').after(bn);
+const bk=()=>{bn.style.display=(data.birds.length+data.pairs.length)&&Date.now()-(+LS('loft_bk')||0)>6048e5?'':'none'};
+const oe=window.exportBackup;window.exportBackup=()=>{oe();LS('loft_bk',Date.now());bk()};
+
+/* 5) تنبيهات المواعيد (تعمل أثناء فتح التطبيق) + ملخص واتساب */
+const days=e=>Math.round((new Date(e+'T12:00:00')-new Date(today()+'T12:00:00'))/864e5);
+const dueList=()=>{const t=today(),o=[];
+ data.pairs.filter(p=>p.status==='جارية').forEach(p=>{const e=p.expectedHatch||addDaysISO(p.date,18);if(!e)return;const d=days(e);if(d<=2)o.push({k:'h'+p.id,m:'عين '+p.nest+': الفقس '+(d>0?'بعد '+d+' يوم':d===0?'اليوم':'متأخر '+(-d)+' يوم')})});
+ data.health.filter(h=>h.follow&&h.follow<=t).forEach(h=>o.push({k:'f'+h.id,m:'متابعة صحية: '+(h.bird||'الغية')}));
+ (data.healthCourses||[]).filter(c=>c.follow&&c.follow<=t&&!['مكتمل','متوقف'].includes(c.status)).forEach(c=>o.push({k:'c'+c.id,m:'متابعة كورس: '+c.name}));return o};
+const notify=()=>{if(!('Notification' in window)||Notification.permission!=='granted')return;let s;try{s=JSON.parse(LS('loft_nt'))}catch{}if(!s||s.d!==today())s={d:today(),k:[]};dueList().filter(x=>!s.k.includes(x.k)).forEach(x=>{new Notification('Moaz Loft',{body:x.m});s.k.push(x.k)});LS('loft_nt',JSON.stringify(s))};
+const hb=$$('.header-actions'),nb=document.createElement('button'),wb=document.createElement('button');
+nb.textContent='🔔 تنبيهات';wb.textContent='📲 واتساب';hb.append(nb,wb);
+nb.onclick=async()=>{if(!('Notification' in window))return toast('المتصفح لا يدعم التنبيهات.');const r=await Notification.requestPermission();toast(r==='granted'?'تم تفعيل التنبيهات. تعمل أثناء فتح التطبيق.':'لم يتم السماح بالتنبيهات.');notify()};
+wb.onclick=()=>{const w=data.pairs.reduce((s,p)=>s+(+p.weaned||0),0),f=data.pairs.reduce((s,p)=>s+(+p.fertile||0),0),i=data.expenses.filter(x=>x.type==='income').reduce((s,x)=>s+(+x.amount||0),0),e=data.expenses.filter(x=>x.type==='expense').reduce((s,x)=>s+(+x.amount||0),0);
+ const t=['🕊️ ملخص الغية — '+today(),'الطيور: '+data.birds.filter(b=>!['مباع','نافق'].includes(b.status)).length,'دورات جارية: '+data.pairs.filter(p=>p.status==='جارية').length,'زغاليل مفطومة: '+w+(f?' ('+Math.round(w/f*100)+'% من المخصب)':''),'إيرادات: '+fmt(i)+' ج.م','مصروفات: '+fmt(e)+' ج.م','الصافي: '+fmt(i-e)+' ج.م','مواعيد مستحقة: '+dueList().length].join('\n');
+ window.open('https://wa.me/?text='+encodeURIComponent(t),'_blank','noopener')};
+setInterval(notify,36e5);
+
+/* 6) ترتيب الأزواج وتكلفة الزغلول (في صفحة التقارير) */
+const rc=document.createElement('div');rc.className='card';rc.style.marginTop='16px';$$('#page-reports .grid').after(rc);
+const rank=()=>{const g={};data.pairs.forEach(p=>{const k=(p.male||'—')+' × '+(p.female||'—'),o=g[k]||(g[k]={k,c:0,f:0,w:0});o.c++;o.f+=+p.fertile||0;o.w+=+p.weaned||0});
+ const L=Object.values(g).sort((a,b)=>(b.f?b.w/b.f:0)-(a.f?a.w/a.f:0)||b.w-a.w),w=data.pairs.reduce((s,p)=>s+(+p.weaned||0),0),sum=f=>data.expenses.filter(x=>x.type==='expense'&&f(x)).reduce((s,x)=>s+(+x.amount||0),0),care=sum(x=>['علف','أدوية ورعاية'].includes(x.category)),all=sum(()=>true);
+ rc.innerHTML='<h3>🏆 ترتيب الأزواج حسب الفطام</h3>'+(L.length?'<div class="table-wrap"><table><thead><tr><th>الزوج</th><th>دورات</th><th>مخصب</th><th>مفطوم</th><th>النسبة</th></tr></thead><tbody>'+L.map(o=>`<tr><td>${esc(o.k)}</td><td>${o.c}</td><td>${o.f}</td><td>${o.w}</td><td><span class="badge">${o.f?Math.round(o.w/o.f*100):0}%</span></td></tr>`).join('')+'</tbody></table></div>':'<p class="muted">سجّل دورات إنتاج لتظهر المقارنة.</p>')+
+ '<div class="divider"></div><div class="list-item"><span>تكلفة الزغلول المفطوم (علف + أدوية)</span><strong>'+(w?fmt(care/w):'—')+' ج.م</strong></div><div class="list-item"><span>تكلفة الزغلول (كل المصروفات)</span><strong>'+(w?fmt(all/w):'—')+' ج.م</strong></div><p class="hint">التكلفة تقسّم المصروفات المسجلة على كل الزغاليل المفطومة، وهي تقدير عام وليست تكلفة كل زوج.</p>'};
+const od=window.renderDashboard,or=window.renderReports;
+window.renderDashboard=()=>{od();bk()};
+window.renderReports=()=>{or();rank()};
+renderDashboard();renderReports();notify();
+})();
+</script>
+<!-- ===== Moaz Loft — باتش 3 (صور الطيور + الذكاء الاصطناعي): الصقه بعد باتش 2 وقبل </body> ===== -->
+<style id="loft-p3">
+.av{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--primary);margin-left:8px;vertical-align:middle;cursor:zoom-in}
+#photoPrev{display:none;width:110px;height:110px;object-fit:cover;border-radius:14px;margin-top:8px;border:1px solid var(--line)}
+#lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:60}
+#lb img{max-width:92vw;max-height:88vh;border-radius:14px}
+</style>
+<script>
+(()=>{
+const Q=s=>document.querySelector(s),LS=(k,v)=>{try{return v===undefined?localStorage.getItem(k):localStorage.setItem(k,v)}catch{return null}};
+let pend;
+
+/* ===== صور الطيور ===== */
+const L=document.createElement('div');L.id='lb';L.innerHTML='<img alt="">';L.onclick=()=>L.style.display='none';document.body.append(L);
+const lb=s=>{L.firstChild.src=s;L.style.display='grid'};
+const shrink=f=>new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>{const i=new Image();i.onload=()=>{const k=Math.min(1,420/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=i.width*k;c.height=i.height*k;c.getContext('2d').drawImage(i,0,0,c.width,c.height);ok(c.toDataURL('image/jpeg',.7))};i.onerror=no;i.src=r.result};r.onerror=no;r.readAsDataURL(f)});
+const ph=document.createElement('div');ph.className='field full';
+ph.innerHTML='<label for="birdPhoto">📷 صورة الطائر</label><input id="birdPhoto" type="file" accept="image/*"><img id="photoPrev" alt=""><div><button type="button" class="btn btn-light btn-small" id="photoDel" style="margin-top:8px">إزالة الصورة</button></div><div class="hint">تُضغط الصورة تلقائيًا لتوفير المساحة.</div>';
+$('birdNotes').closest('.field').before(ph);
+const fi=$('birdPhoto'),pv=$('photoPrev');
+const showPv=s=>{pv.src=s||'';pv.style.display=s?'block':'none'};
+fi.onchange=async()=>{const f=fi.files[0];if(!f)return;try{pend=await shrink(f);showPv(pend)}catch{toast('تعذر قراءة الصورة.')}};
+$('photoDel').onclick=()=>{pend='';fi.value='';showPv('')};
+const orf=window.resetBirdForm;window.resetBirdForm=()=>{orf();pend=undefined;fi.value='';showPv('')};
+const osb=window.saveBird;
+window.saveBird=e=>{const id=$('birdId').value,ring=$('birdRing').value.trim(),p=pend,old=byId('birds',id)?.photo||'';osb(e);
+ if($('birdRing').value!=='')return;const b=data.birds.find(x=>x.ring===ring);if(!b)return;const f=p===undefined?old:p;if(f)b.photo=f;else delete b.photo;saveData();renderAll()};
+const oeb=window.editBird;window.editBird=id=>{oeb(id);pend=undefined;fi.value='';showPv(byId('birds',id)?.photo)};
+const orb=window.renderBirds;
+window.renderBirds=()=>{orb();document.querySelectorAll('#birdsTableBody tr').forEach(tr=>{const s=tr.querySelector('td strong');if(!s)return;const b=data.birds.find(x=>x.ring===s.textContent);if(b?.photo){const im=new Image();im.className='av';im.src=b.photo;im.onclick=()=>lb(b.photo);tr.firstElementChild.prepend(im)}})};
+const osp=window.showPedigree;
+window.showPedigree=()=>{osp();const b=birdByRing($('pedigreeSelect').value),c=Q('#pedigreeResult .card');if(b?.photo&&c){const im=new Image();im.src=b.photo;im.style.cssText='width:100%;max-height:260px;object-fit:cover;border-radius:12px;margin-bottom:12px;cursor:zoom-in';im.onclick=()=>lb(b.photo);c.prepend(im)}};
+
+/* ===== المساعد الذكي (Claude API) ===== */
+Q('#page-assistant .page-heading p').textContent='مساعد ذكي يعرف بيانات غيتك كلها: اسأله عن أي طائر أو زوج برقمه وهيجاوبك فورًا.';
+Q('#page-assistant .notice').innerHTML='عند كل سؤال تُرسل بيانات الغية (بدون الصور) إلى Anthropic لتحليلها. الإجابات إرشادية، ولا تغني عن الطبيب البيطري في التشخيص أو الأدوية.';
+const cfg=document.createElement('div');cfg.className='card';cfg.style.marginBottom='16px';
+cfg.innerHTML='<h3>🔑 تفعيل الذكاء الاصطناعي</h3><div class="form-grid"><div class="field"><label for="aiKey">مفتاح Anthropic API</label><input id="aiKey" type="password" autocomplete="off" placeholder="sk-ant-..."></div><div class="field"><label for="aiModel">النموذج</label><select id="aiModel"><option value="claude-sonnet-5-5">Sonnet 5.5 (متوازن)</option><option value="claude-haiku-5-5">Haiku 5.5 (أسرع وأرخص)</option><option value="claude-opus-5-5">Opus 5.5 (الأقوى)</option></select></div></div><div class="actions"><button class="btn btn-primary" id="aiSave" type="button">حفظ</button><button class="btn btn-light" id="aiDel" type="button">حذف المفتاح</button><span class="badge" id="aiState"></span></div><p class="hint">المفتاح يُحفظ في متصفحك فقط. استخدم مفتاحًا مخصصًا لهذا التطبيق بحد صرف منخفض، ولا تشاركه ولا تفتح التطبيق على جهاز عام.</p>';
+Q('#page-assistant .notice').after(cfg);
+const st=()=>{$('aiState').textContent=LS('loft_ai_key')?'✅ مفعّل':'غير مفعّل'};
+$('aiModel').value=LS('loft_ai_model')||'claude-sonnet-5-5';st();
+$('aiSave').onclick=()=>{const k=$('aiKey').value.trim();if(k){LS('loft_ai_key',k);$('aiKey').value=''}LS('loft_ai_model',$('aiModel').value);st();toast('تم حفظ الإعدادات.')};
+$('aiDel').onclick=()=>{localStorage.removeItem('loft_ai_key');st();toast('تم حذف المفتاح.')};
+
+const snap=()=>{const sum={};data.expenses.forEach(x=>{const k=x.type+':'+x.category;sum[k]=(sum[k]||0)+(+x.amount||0)});
+ return{today:today(),
+ birds:data.birds.map(b=>({ring:b.ring,breed:b.breed,sex:b.sex,status:b.status,birth:b.birth,color:b.color,father:b.father,mother:b.mother,notes:b.notes})),
+ pairs:data.pairs.map(p=>({nest:p.nest,male:p.male,female:p.female,start:p.date,expectedHatch:p.expectedHatch||addDaysISO(p.date,18),eggs:p.eggsLaid,fertile:p.fertile,hatched:p.hatched,weaned:p.weaned,status:p.status,notes:p.notes})),
+ health:data.health.slice(-80).map(h=>({date:h.date,bird:h.bird,type:h.type,text:h.symptoms,follow:h.follow,notes:h.notes})),
+ courses:(data.healthCourses||[]).slice(-30).map(c=>({name:c.name,purpose:c.purpose,target:c.target,status:c.status,start:c.start,end:c.end,follow:c.follow,cost:c.cost,items:c.ingredients,notes:c.notes})),
+ feedPurchases:data.feedPurchases.slice(-15),moneyTotalsByType_Category:sum,lastExpenses:data.expenses.slice(-25).map(x=>({date:x.date,type:x.type,cat:x.category,amount:x.amount,desc:x.description}))}};
+const sys=()=>'أنت «مساعد الغية»، خبير في تربية الحمام وإدارة الغية. بتكلم صاحب الغية بالعامية المصرية بشكل مباشر ومختصر. عندك بياناته الكاملة بصيغة JSON أدناه. لما يسأل عن طائر أو زوج أو دورة، دوّر عليه في البيانات بالدبلة أو رقم العين وجاوب فورًا بالأرقام الفعلية من غير ما تطلب منه تفاصيل. لو الاسم مش واضح أو فيه أكتر من احتمال، اذكر الاحتمالات. لو المعلومة مش في البيانات قل ذلك صراحة ولا تخترع. اربط التحليل بالبيانات (الخصوبة والفقس والفطام، القرابة، الحالة الصحية، التكلفة) واختم بتوصية عملية. في الصحة: لا تحدد أدوية ولا جرعات، اذكر الاحتمالات والخطوات الآمنة ومتى يلزم طبيب بيطري. لو أُرفقت صورة طائر، علّق على ما تراه فقط ولا تشخّص منها. اكتب نصًا عاديًا بدون ماركداون أو نجوم، بأسطر قصيرة.\nالبيانات:\n'+JSON.stringify(snap());
+let hist=[];
+const oa=window.askAssistant;
+window.askAssistant=async e=>{e.preventDefault();const q=$('aiQuery').value.trim(),key=LS('loft_ai_key');if(!q)return;
+ if(!key){toast('أضف مفتاح API أولًا لتفعيل الذكاء الاصطناعي.');return oa(e)}
+ appendMessage('user',q);$('aiQuery').value='';appendMessage('ai','⏳ بفكر...');
+ const box=$('chatBox'),el=box.lastElementChild,btn=Q('#aiForm button[type=submit]');btn.disabled=true;
+ try{
+  const imgs=data.birds.filter(b=>b.photo&&q.toLowerCase().includes(String(b.ring).toLowerCase())).slice(0,2).map(b=>({type:'image',source:{type:'base64',media_type:'image/jpeg',data:b.photo.split(',')[1]}}));
+  const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'content-type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:LS('loft_ai_model')||'claude-sonnet-5-5',max_tokens:1200,system:sys(),messages:[...hist.slice(-10),{role:'user',content:[...imgs,{type:'text',text:q}]}]})});
+  const j=await r.json();if(!r.ok)throw new Error(j.error?.message||r.status);
+  const a=(j.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('').trim()||'مفيش رد.';
+  el.textContent=a;hist.push({role:'user',content:q},{role:'assistant',content:a})
+ }catch(err){el.textContent='تعذر الحصول على رد: '+err.message+'\nتأكد من المفتاح ومن الاتصال بالإنترنت.'}
+ finally{btn.disabled=false;box.scrollTop=box.scrollHeight}};
+const ocl=window.clearChat;window.clearChat=()=>{hist=[];ocl()};
+
+const chips=document.createElement('div');chips.className='pill-row';chips.style.marginBottom='10px';
+[['📋 ملخص الغية','لخّص لي حالة الغية كلها ونبّهني لأهم حاجات محتاجة متابعة'],['🏆 أحسن زوج','مين أحسن زوج عندي ولماذا؟ وأي أزواج أداؤها ضعيف؟'],['🩺 محتاج متابعة','مين الطيور والكورسات اللي محتاجة متابعة دلوقتي؟'],['💰 تكلفة وربح','حلل مصاريفي وإيراداتي وتكلفة الزغلول وقولي أعمل إيه']].forEach(([t,q])=>{const b=document.createElement('button');b.type='button';b.className='btn btn-light btn-small';b.textContent=t;b.onclick=()=>{$('aiQuery').value=q;$('aiForm').requestSubmit()};chips.append(b)});
+$('aiForm').before(chips);
+renderBirds();
+})();
+</script>
+<!-- ===== Moaz Loft — تحويل المساعد إلى Gemini: الصقه بعد باتش 3 وقبل </body> ===== -->
+<script>
+(()=>{
+const of=window.fetch.bind(window),LS=(k,v)=>{try{return v===undefined?localStorage.getItem(k):localStorage.setItem(k,v)}catch{return null}};
+
+/* يحوّل طلب المساعد من صيغة Anthropic إلى Gemini ويرجّع الرد بنفس الصيغة */
+window.fetch=async(u,o)=>{
+ if(String(u)!=='https://api.anthropic.com/v1/messages')return of(u,o);
+ const b=JSON.parse(o.body),key=o.headers['x-api-key'],model=String(b.model).startsWith('gemini')?b.model:'gemini-3.5-flash';
+ const contents=b.messages.map(m=>({role:m.role==='assistant'?'model':'user',parts:typeof m.content==='string'?[{text:m.content}]:m.content.map(c=>c.type==='image'?{inlineData:{mimeType:c.source.media_type,data:c.source.data}}:{text:c.text})}));
+ const r=await of('https://generativelanguage.googleapis.com/v1beta/models/'+encodeURIComponent(model)+':generateContent',{method:'POST',headers:{'content-type':'application/json','x-goog-api-key':key},body:JSON.stringify({systemInstruction:{parts:[{text:b.system}]},contents,generationConfig:{maxOutputTokens:4096}})});
+ const j=await r.json().catch(()=>({}));
+ const text=(j.candidates?.[0]?.content?.parts||[]).map(p=>p.text||'').join('').trim();
+ const out=r.ok?{content:[{type:'text',text:text||'مفيش رد (ممكن يكون الرد اتحجب). جرّب صياغة تانية.'}]}:{error:{message:j.error?.message||String(r.status)}};
+ return new Response(JSON.stringify(out),{status:r.ok?200:r.status,headers:{'content-type':'application/json'}})};
+
+/* تحديث واجهة الإعدادات */
+const lab=document.querySelector('label[for=aiKey]');if(lab)lab.textContent='مفتاح Gemini API (من aistudio.google.com)';
+const ki=document.getElementById('aiKey');if(ki)ki.placeholder='AIza...';
+const sel=document.getElementById('aiModel');
+if(sel){sel.innerHTML='<option value="gemini-3.5-flash">Gemini 3.5 Flash (سريع ومتوازن)</option><option value="gemini-3.1-pro-preview">Gemini 3.1 Pro Preview (الأقوى)</option><option value="gemini-3.1-flash-lite">Gemini 3.1 Flash-Lite (الأرخص)</option>';
+ const m=LS('loft_ai_model');sel.value=String(m).startsWith('gemini')?m:'gemini-3.5-flash';LS('loft_ai_model',sel.value)}
+const n=document.querySelector('#page-assistant .notice');if(n)n.innerHTML='عند كل سؤال تُرسل بيانات الغية (بدون الصور إلا لو ذكرت دبلة طائر له صورة) إلى Google Gemini لتحليلها. الإجابات إرشادية، ولا تغني عن الطبيب البيطري في التشخيص أو الأدوية.';
+if((LS('loft_ai_key')||'').startsWith('sk-ant')){localStorage.removeItem('loft_ai_key');const s=document.getElementById('aiState');if(s)s.textContent='غير مفعّل';if(typeof toast==='function')toast('تم حذف مفتاح Anthropic القديم. أضف مفتاح Gemini.')}
+})();
+</script>
+
+</body>
+</html>
